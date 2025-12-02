@@ -6,9 +6,17 @@
     <meta name="description" content="Jacob Gruver - Design Portfolio showcasing compassionate and user-centered design projects">
     <title>Jacob Gruver | Design Portfolio</title>
 
-    <!-- Always redirect to welcome page -->
+    <!-- Redirect to welcome page if no theme selected -->
     <script>
-        window.location.href = 'welcome.html';
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlTheme = urlParams.get('theme');
+
+            // Only redirect if there's no theme parameter in URL
+            if (!urlTheme) {
+                window.location.href = 'welcome.html';
+            }
+        })();
     </script>
 
     <!-- Theme Detection - Must run BEFORE styles to prevent FOUC -->
