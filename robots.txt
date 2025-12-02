@@ -1,0 +1,10 @@
+# Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# Prevent indexing of specific files if needed
+# Disallow: /private/
+# Disallow: /drafts/
+
+# Sitemap location (update with your actual domain)
+# Sitemap: https://yourwebsite.com/sitemap.xml

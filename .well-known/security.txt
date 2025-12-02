@@ -1,0 +1,7 @@
+Contact: mailto:your.email@example.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://yourwebsite.com/.well-known/security.txt
+
+# If you discover a security issue with this website, please report it responsibly.
+# Please do not publicly disclose the issue until it has been addressed.

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jacob Gruver - Resume & CV">
+    <title>Resume | Jacob Gruver</title>
+
+    <!-- Theme Detection -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('preferredTheme');
+                if (savedTheme) {
+                    document.documentElement.className = savedTheme;
+                } else {
+                    document.documentElement.className = 'theme-undecided';
+                }
+            } catch (e) {
+                document.documentElement.className = 'theme-undecided';
+            }
+        })();
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="resume-body">
+
+    <!-- Resume Viewer -->
+    <div class="resume-viewer">
+        <!-- Back Button (aligned with left arrow) -->
+        <a href="index.html" class="resume-back-btn">← Back to Portfolio</a>
+
+        <!-- Left Arrow -->
+        <button class="resume-nav-btn resume-prev" id="prevBtn">‹</button>
+
+        <!-- Pages -->
+        <div class="resume-pages-wrapper">
+            <div class="resume-pages" id="resumePages">
+                <img src="images/resume/Jacob H Gruver Resume Nov-2025-1.jpg" alt="Page 1" class="resume-page-img">
+                <img src="images/resume/Jacob H Gruver Resume Nov-2025-2.jpg" alt="Page 2" class="resume-page-img">
+                <img src="images/resume/Jacob H Gruver Resume Nov-2025-3.jpg" alt="Page 3" class="resume-page-img">
+                <img src="images/resume/Jacob H Gruver Resume Nov-2025-4.jpg" alt="Page 4" class="resume-page-img">
+                <img src="images/resume/Jacob H Gruver Resume Nov-2025-5.jpg" alt="Page 5" class="resume-page-img">
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="resume-nav-btn resume-next" id="nextBtn">›</button>
+
+        <!-- Download Button (aligned with right arrow) -->
+        <a href="files/Jacob-Gruver-Resume.pdf" download class="resume-download-btn">Download PDF ⬇</a>
+    </div>
+
+    <!-- Controls -->
+    <div class="resume-controls">
+        <div class="resume-dots" id="dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+        </div>
+        <p class="resume-counter" id="counter">Pages 1-2 of 5</p>
+    </div>
+
+    <!-- Magnifying Glass -->
+    <div class="magnifier" id="magnifier"></div>
+
+    <script>
+        // Simple two-page carousel
+        let currentIndex = 0;
+        const totalPages = 5;
+        const pagesContainer = document.getElementById('resumePages');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+        const counter = document.getElementById('counter');
+
+        function updateView() {
+            // Move the container to show current pair of pages
+            const offset = -(currentIndex * 50); // 50% per page
+            pagesContainer.style.transform = `translateX(${offset}%)`;
+
+            // Update dots - highlight current and next page
+            dots.forEach((dot, i) => {
+                if (i === currentIndex || i === currentIndex + 1) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            // Update counter
+            const firstPage = currentIndex + 1;
+            const secondPage = Math.min(currentIndex + 2, totalPages);
+            counter.textContent = `Pages ${firstPage}-${secondPage} of ${totalPages}`;
+
+            // Update button states
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex >= totalPages - 2;
+        }
+
+        // Navigation
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateView();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < totalPages - 2) {
+                currentIndex++;
+                updateView();
+            }
+        });
+
+        // Dot clicks
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                // If clicking last page, show pages 4-5
+                if (index === totalPages - 1) {
+                    currentIndex = totalPages - 2;
+                } else {
+                    currentIndex = index;
+                }
+                updateView();
+            });
+        });
+
+        // Keyboard
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                currentIndex--;
+                updateView();
+            } else if (e.key === 'ArrowRight' && currentIndex < totalPages - 2) {
+                currentIndex++;
+                updateView();
+            }
+        });
+
+        // Initialize
+        updateView();
+
+        // ===== Magnifying Glass =====
+        const magnifier = document.getElementById('magnifier');
+        const resumeImages = document.querySelectorAll('.resume-page-img');
+        const magnificationLevel = 2.5; // 2.5x zoom
+        const magnifierSize = 300; // 300px diameter
+
+        // Set magnifier size
+        magnifier.style.width = magnifierSize + 'px';
+        magnifier.style.height = magnifierSize + 'px';
+
+        resumeImages.forEach(img => {
+            // Show magnifier on mouse enter
+            img.addEventListener('mouseenter', () => {
+                magnifier.style.display = 'block';
+            });
+
+            // Hide magnifier on mouse leave
+            img.addEventListener('mouseleave', () => {
+                magnifier.style.display = 'none';
+            });
+
+            // Move magnifier and update background
+            img.addEventListener('mousemove', (e) => {
+                const rect = img.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                // Position magnifier centered on cursor
+                magnifier.style.left = (e.clientX - magnifierSize / 2) + 'px';
+                magnifier.style.top = (e.clientY - magnifierSize / 2) + 'px';
+
+                // Calculate background position for magnified view
+                const bgPosX = -(x * magnificationLevel - magnifierSize / 2);
+                const bgPosY = -(y * magnificationLevel - magnifierSize / 2);
+
+                // Set background image and position
+                magnifier.style.backgroundImage = `url('${img.src}')`;
+                magnifier.style.backgroundSize = `${rect.width * magnificationLevel}px ${rect.height * magnificationLevel}px`;
+                magnifier.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
+            });
+        });
+    </script>
+</body>
+</html>
