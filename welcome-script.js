@@ -44,8 +44,9 @@ function createLoadingAnimation() {
         };
     });
 
-    // Create falling tiles
-    const totalTiles = 20;
+    // Create falling tiles - fewer on mobile for performance
+    const isMobile = window.innerWidth <= 768;
+    const totalTiles = isMobile ? 10 : 20;
     const tilesContainer = document.createElement('div');
     tilesContainer.style.cssText = `
         position: fixed;

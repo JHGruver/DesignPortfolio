@@ -143,47 +143,51 @@
         // Initialize
         updateView();
 
-        // ===== Magnifying Glass =====
+        // ===== Magnifying Glass (Desktop only) =====
         const magnifier = document.getElementById('magnifier');
         const resumeImages = document.querySelectorAll('.resume-page-img');
-        const magnificationLevel = 2.5; // 2.5x zoom
-        const magnifierSize = 300; // 300px diameter
 
-        // Set magnifier size
-        magnifier.style.width = magnifierSize + 'px';
-        magnifier.style.height = magnifierSize + 'px';
+        // Detect touch device - disable magnifier, allow native pinch-to-zoom
+        const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-        resumeImages.forEach(img => {
-            // Show magnifier on mouse enter
-            img.addEventListener('mouseenter', () => {
-                magnifier.style.display = 'block';
+        if (!isTouchDevice) {
+            const magnificationLevel = 2.5;
+            const magnifierSize = 300;
+
+            magnifier.style.width = magnifierSize + 'px';
+            magnifier.style.height = magnifierSize + 'px';
+
+            resumeImages.forEach(img => {
+                img.addEventListener('mouseenter', () => {
+                    magnifier.style.display = 'block';
+                });
+
+                img.addEventListener('mouseleave', () => {
+                    magnifier.style.display = 'none';
+                });
+
+                img.addEventListener('mousemove', (e) => {
+                    const rect = img.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    magnifier.style.left = (e.clientX - magnifierSize / 2) + 'px';
+                    magnifier.style.top = (e.clientY - magnifierSize / 2) + 'px';
+
+                    const bgPosX = -(x * magnificationLevel - magnifierSize / 2);
+                    const bgPosY = -(y * magnificationLevel - magnifierSize / 2);
+
+                    magnifier.style.backgroundImage = `url('${img.src}')`;
+                    magnifier.style.backgroundSize = `${rect.width * magnificationLevel}px ${rect.height * magnificationLevel}px`;
+                    magnifier.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
+                });
             });
-
-            // Hide magnifier on mouse leave
-            img.addEventListener('mouseleave', () => {
-                magnifier.style.display = 'none';
+        } else {
+            magnifier.style.display = 'none';
+            resumeImages.forEach(img => {
+                img.style.cursor = 'default';
             });
-
-            // Move magnifier and update background
-            img.addEventListener('mousemove', (e) => {
-                const rect = img.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                // Position magnifier centered on cursor
-                magnifier.style.left = (e.clientX - magnifierSize / 2) + 'px';
-                magnifier.style.top = (e.clientY - magnifierSize / 2) + 'px';
-
-                // Calculate background position for magnified view
-                const bgPosX = -(x * magnificationLevel - magnifierSize / 2);
-                const bgPosY = -(y * magnificationLevel - magnifierSize / 2);
-
-                // Set background image and position
-                magnifier.style.backgroundImage = `url('${img.src}')`;
-                magnifier.style.backgroundSize = `${rect.width * magnificationLevel}px ${rect.height * magnificationLevel}px`;
-                magnifier.style.backgroundPosition = `${bgPosX}px ${bgPosY}px`;
-            });
-        });
+        }
     </script>
 </body>
 </html>

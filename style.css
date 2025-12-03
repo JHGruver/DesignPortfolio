@@ -10536,6 +10536,115 @@ section {
     }
 }
 
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+    /* Base font size for readability */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Hero section */
+    .hero {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* Cards and content */
+    .case-study-card h3,
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .case-study-card p,
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    /* Buttons - ensure touch-friendly size */
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    /* Navigation */
+    .nav-link {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    /* Testimonials */
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+
+    /* Skills */
+    .skill-card h3 {
+        font-size: 1rem;
+    }
+
+    /* Timeline */
+    .timeline-card h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Contact section */
+    .contact-info {
+        font-size: 0.95rem;
+    }
+}
+
+/* Very small phones (375px and below) */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* ===== Animations ===== */
 @keyframes fadeInUp {
     from {
