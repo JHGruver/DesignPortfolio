@@ -16,6 +16,10 @@ let hoverTimeout = null;
 let hoverTimer = null;
 let hoverStartTime = null;
 
+// Touch device detection
+const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+let selectedButton = null; // Track which button is "selected" on touch devices
+
 // ===== Page Loading Animation =====
 function createLoadingAnimation() {
     // Hide all content initially
@@ -491,53 +495,86 @@ function init() {
     choiceButtons.forEach(button => {
         const theme = button.getAttribute('data-theme');
 
-        // Mouse enter - change theme
-        button.addEventListener('mouseenter', () => {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(() => {
-                changeTheme(theme);
-            }, 50); // Small delay for smoother experience
+        if (!isTouchDevice) {
+            // Desktop: Mouse hover behavior
+            button.addEventListener('mouseenter', () => {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = setTimeout(() => {
+                    changeTheme(theme);
+                }, 50);
 
-            // Create falling shapes
-            createFallingShapes(button, theme);
+                createFallingShapes(button, theme);
 
-            // Start hover counter for business theme
-            if (theme === 'business') {
-                startHoverCounter(button);
+                if (theme === 'business') {
+                    startHoverCounter(button);
+                }
+            });
+
+            button.addEventListener('mouseleave', () => {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = setTimeout(() => {
+                    if (currentTheme !== 'default') {
+                        revertToDefault();
+                    }
+                }, 100);
+
+                stopHoverCounter(button);
+            });
+
+            // Desktop click - navigate immediately
+            button.addEventListener('click', () => {
+                navigateToTheme(theme, button);
+            });
+        } else {
+            // Touch device: Tap to preview, tap again to confirm
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                if (selectedButton === button) {
+                    // Second tap on same button - navigate
+                    navigateToTheme(theme, button);
+                } else {
+                    // First tap - preview theme
+                    // Remove selection from previous button
+                    if (selectedButton) {
+                        selectedButton.classList.remove('touch-selected');
+                    }
+
+                    // Select this button and preview theme
+                    selectedButton = button;
+                    button.classList.add('touch-selected');
+                    changeTheme(theme);
+                    createFallingShapes(button, theme);
+
+                    if (theme === 'business') {
+                        startHoverCounter(button);
+                    }
+                }
+            });
+        }
+    });
+
+    // Touch: Tap outside buttons to deselect
+    if (isTouchDevice) {
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.choice-btn') && selectedButton) {
+                selectedButton.classList.remove('touch-selected');
+                selectedButton = null;
+                revertToDefault();
             }
         });
+    }
 
-        // Mouse leave - revert to default if not clicked
-        button.addEventListener('mouseleave', () => {
-            clearTimeout(hoverTimeout);
-            hoverTimeout = setTimeout(() => {
-                if (currentTheme !== 'default') {
-                    revertToDefault();
-                }
-            }, 100);
-
-            // Stop hover counter
-            stopHoverCounter(button);
-        });
-
-        // Click - navigate to portfolio with theme preference
-        button.addEventListener('click', () => {
-            // Store theme preference
-            localStorage.setItem('preferredTheme', theme);
-
-            // Add theme-specific exit animation
-            addThemeTransition(theme, button);
-
-            // Get target URL
-            const target = button.getAttribute('data-target');
-
-            // Navigate after animation (timing varies by theme)
-            const transitionDuration = getTransitionDuration(theme);
-            setTimeout(() => {
-                window.location.href = target + '?theme=' + theme;
-            }, transitionDuration);
-        });
-    });
+    // Helper function to navigate to theme
+    function navigateToTheme(theme, button) {
+        localStorage.setItem('preferredTheme', theme);
+        addThemeTransition(theme, button);
+        const target = button.getAttribute('data-target');
+        const transitionDuration = getTransitionDuration(theme);
+        setTimeout(() => {
+            window.location.href = target + '?theme=' + theme;
+        }, transitionDuration);
+    }
 
     // Container hover - maintain theme
     const container = document.querySelector('.choices-container');

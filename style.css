@@ -10463,7 +10463,79 @@ section {
 }
 
 /* ===== Responsive Design ===== */
+
+/* iPad Pro and large tablets (1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        gap: 2rem;
+    }
+
+    .hero-image {
+        max-width: 350px;
+    }
+
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    /* Fix for iOS Safari 100vh issue */
+    .hero {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+}
+
 @media (max-width: 768px) {
+    /* ===== Touch-Friendly Tap Targets (44px minimum) ===== */
+    .nav-link {
+        display: block;
+        padding: 12px 16px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: flex;
+        padding: 10px;
+        min-width: 44px;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn,
+    button,
+    [role="button"] {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    .dot {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-link,
+    .footer a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Resume navigation buttons */
+    .resume-nav-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* ===== Navigation ===== */
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -10479,10 +10551,6 @@ section {
 
     .nav-menu.active {
         left: 0;
-    }
-
-    .hamburger {
-        display: flex;
     }
 
     .hamburger.active span:nth-child(1) {

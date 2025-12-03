@@ -13,6 +13,11 @@
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
+/* Fix for iOS Safari 100vh issue */
+html {
+    height: -webkit-fill-available;
+}
+
 /* Designer Theme - Orange & White, Glassmorphic */
 body.theme-designer {
     --bg-color: #ffffff;
@@ -98,6 +103,8 @@ body {
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-x: hidden;
     position: relative;
+    /* iOS Safari 100vh fix */
+    min-height: -webkit-fill-available;
 }
 
 /* Default Theme Background */
@@ -775,6 +782,131 @@ body.theme-classic .hint-text {
 .choice-btn:focus {
     outline: 3px solid var(--accent-color);
     outline-offset: 4px;
+}
+
+/* ===== Touch Device Support ===== */
+.choice-btn.touch-selected {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.choice-btn.touch-selected::after {
+    content: 'Tap again to select';
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color, #333);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    animation: fadeInUp 0.3s ease-out;
+    z-index: 10;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Ensure buttons have relative positioning for the ::after element */
+.choice-btn {
+    position: relative;
+}
+
+/* ===== Orientation Handling ===== */
+/* Landscape phones - adjust to fit width */
+@media (max-height: 500px) and (orientation: landscape) {
+    .welcome-container {
+        padding: 1rem;
+    }
+
+    .welcome-message {
+        margin-bottom: 1rem;
+    }
+
+    .welcome-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .question-section {
+        margin-bottom: 1rem;
+    }
+
+    .question {
+        font-size: 1.1rem;
+    }
+
+    .choices-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .choice-btn {
+        min-height: 120px;
+        padding: 1rem 0.75rem;
+    }
+
+    .icon-wrapper {
+        width: 36px;
+        height: 36px;
+    }
+
+    .choice-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .choice-title {
+        font-size: 0.85rem;
+    }
+
+    .choice-description {
+        font-size: 0.7rem;
+    }
+
+    .hint-text {
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .choices-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .choice-btn {
+        min-height: 200px;
+    }
+}
+
+/* Tablet portrait */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .choices-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .choice-btn {
+        min-height: 220px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
