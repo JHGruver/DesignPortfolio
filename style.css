@@ -28899,6 +28899,41 @@ html.theme-mentor .cs-animate.cs-visible {
     font-weight: 500;
 }
 
+/* Final Result Section */
+.cs-final-result {
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 80px 0;
+}
+
+.cs-content-full {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.cs-final-image-showcase {
+    margin: 0;
+    text-align: center;
+}
+
+.cs-final-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.15);
+    display: block;
+    margin: 0 auto;
+}
+
+.cs-final-caption {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+}
+
 /* Responsive for CloudCar Components */
 @media (max-width: 768px) {
     .cs-opportunity-map {
@@ -28932,6 +28967,14 @@ html.theme-mentor .cs-animate.cs-visible {
     .cs-mockups-gallery {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 16px;
+    }
+
+    .cs-final-result {
+        padding: 60px 0;
+    }
+
+    .cs-final-image {
+        border-radius: 12px;
     }
 }
 
@@ -28971,6 +29014,23 @@ html.theme-mentor .cs-animate.cs-visible {
 
     .cs-showcase-image {
         border-radius: 8px;
+    }
+
+    .cs-final-result {
+        padding: 48px 0;
+    }
+
+    .cs-final-image {
+        border-radius: 8px;
+    }
+
+    .cs-final-caption {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    .cs-content-full {
+        padding: 0 16px;
     }
 }
 
@@ -29817,4 +29877,48 @@ html.theme-mentor .cs-mockup-image {
 
 html.theme-mentor .cs-mockup-image:hover {
     box-shadow: 0 20px 60px rgba(156,39,176,0.18);
+}
+
+/* =====================================================
+   FINAL RESULT SECTION - Theme-Specific Overrides
+   ===================================================== */
+
+/* Undecided Theme (Newspaper) */
+html.theme-undecided .cs-final-result {
+    background: #f4ede4;
+}
+
+html.theme-undecided .cs-final-image {
+    border-radius: 0;
+    box-shadow: 8px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Designer Theme (Orange) */
+html.theme-designer .cs-final-result {
+    background: linear-gradient(180deg, #fff5eb 0%, #ffffff 100%);
+}
+
+html.theme-designer .cs-final-image {
+    border-radius: 24px;
+    box-shadow: 0 32px 100px rgba(255,107,0,0.2);
+}
+
+/* Business Theme (Blue) */
+html.theme-business .cs-final-result {
+    background: linear-gradient(180deg, #f0f4f8 0%, #ffffff 100%);
+}
+
+html.theme-business .cs-final-image {
+    border-radius: 8px;
+    box-shadow: 0 24px 64px rgba(0,51,102,0.15);
+}
+
+/* Mentor Theme (Purple) */
+html.theme-mentor .cs-final-result {
+    background: linear-gradient(180deg, #faf5fc 0%, #ffffff 100%);
+}
+
+html.theme-mentor .cs-final-image {
+    border-radius: 32px;
+    box-shadow: 0 32px 100px rgba(156,39,176,0.15);
 }
