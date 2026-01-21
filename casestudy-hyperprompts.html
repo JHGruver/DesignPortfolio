@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HyperPrompts Case Study - AI Aggregator SaaS Platform Design by Jacob Gruver">
+    <title>HyperPrompts Case Study | Jacob Gruver</title>
+
+    <!-- Theme Detection -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('preferredTheme');
+                if (savedTheme) {
+                    document.documentElement.className = savedTheme;
+                } else {
+                    document.documentElement.className = 'theme-mentor';
+                }
+            } catch (e) {
+                document.documentElement.className = 'theme-mentor';
+            }
+        })();
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="casestudy-body">
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="cs-skip-link">Skip to main content</a>
+
+    <!-- Back Navigation -->
+    <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="index.html" class="cs-back-btn">← Back to Portfolio</a>
+    </nav>
+
+    <!-- SECTION 1: Hero -->
+    <header class="cs-hero" role="banner">
+        <div class="cs-hero-content">
+            <span class="cs-label">Case Study</span>
+            <h1 class="cs-hero-title">AI Aggregator SaaS Platform</h1>
+            <p class="cs-hero-tagline">Building a unified platform to aggregate 30+ AI tools while securing $250K in seed funding and generating $140K in client sales — all within 7 months.</p>
+
+            <!-- Key Metrics Bar -->
+            <div class="cs-metrics-bar" role="list" aria-label="Key achievements">
+                <div class="cs-metric" role="listitem">
+                    <span class="cs-metric-value">$250K</span>
+                    <span class="cs-metric-label">Seed Funding</span>
+                </div>
+                <div class="cs-metric" role="listitem">
+                    <span class="cs-metric-value">$140K</span>
+                    <span class="cs-metric-label">Client Sales</span>
+                </div>
+                <div class="cs-metric" role="listitem">
+                    <span class="cs-metric-value">7 Mo</span>
+                    <span class="cs-metric-label">To Launch</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: Project Overview Bar (Sticky) -->
+    <aside class="cs-overview-bar" aria-label="Project overview">
+        <div class="cs-overview-item">
+            <h3 class="cs-overview-heading">Duration & Team</h3>
+            <p class="cs-overview-value">7 Months</p>
+            <p class="cs-overview-detail">3 Founders + Dev Team<br>July 2023 – Feb 2024</p>
+        </div>
+        <div class="cs-overview-item">
+            <h3 class="cs-overview-heading">My Role</h3>
+            <p class="cs-overview-value">Sole Designer</p>
+            <p class="cs-overview-detail">End-to-End UX/UI<br>Research, Design System, Pitch Support</p>
+        </div>
+        <div class="cs-overview-item">
+            <h3 class="cs-overview-heading">Tools & Methods</h3>
+            <p class="cs-overview-value">Figma, Notion, Miro</p>
+            <p class="cs-overview-detail">User Interviews<br>Competitive Analysis</p>
+        </div>
+    </aside>
+
+    <main id="main-content" class="cs-main" role="main">
+
+        <!-- SECTION 3: The Challenge -->
+        <section class="cs-section" id="challenge" aria-labelledby="challenge-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">01</span>
+                <h2 class="cs-section-title" id="challenge-title">The Challenge</h2>
+                <p class="cs-section-subtitle">AI was exploding, but there was no single hub to compare, test, and use the best tools in one place.</p>
+            </header>
+
+            <div class="cs-content">
+                <!-- Pain Points Journey -->
+                <div class="cs-journey" role="figure" aria-label="User pain point journey showing tool switching">
+                    <div class="cs-journey-step">
+                        <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
+                        <span class="cs-journey-tool">ChatGPT</span>
+                        <span class="cs-journey-use">For text generation</span>
+                    </div>
+                    <span class="cs-journey-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    <div class="cs-journey-step">
+                        <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" y1="16" x2="8" y2="16"></line><line x1="16" y1="16" x2="16" y2="16"></line></svg></span>
+                        <span class="cs-journey-tool">Claude</span>
+                        <span class="cs-journey-use">For analysis</span>
+                    </div>
+                    <span class="cs-journey-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    <div class="cs-journey-step">
+                        <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="16" r="2"></circle><path d="M9 12a6 6 0 0 0 7.5-4.5"></path></svg></span>
+                        <span class="cs-journey-tool">Midjourney</span>
+                        <span class="cs-journey-use">For images</span>
+                    </div>
+                    <div class="cs-journey-pain">
+                        Constant context switching = Lost productivity
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="cs-stats-grid">
+                    <article class="cs-stat-card">
+                        <span class="cs-stat-label">At Stake</span>
+                        <span class="cs-stat-value">$250K</span>
+                        <span class="cs-stat-context">Seed Funding Goal</span>
+                    </article>
+                    <article class="cs-stat-card">
+                        <span class="cs-stat-label">Market Gap</span>
+                        <span class="cs-stat-value">30+</span>
+                        <span class="cs-stat-context">Fragmented Tools</span>
+                    </article>
+                    <article class="cs-stat-card">
+                        <span class="cs-stat-label">Timeline</span>
+                        <span class="cs-stat-value">7 Mo</span>
+                        <span class="cs-stat-context">To MVP & Funding</span>
+                    </article>
+                </div>
+
+                <!-- Pull Quote -->
+                <blockquote class="cs-quote">
+                    <p>"I waste half my day switching between ChatGPT, Claude, and others."</p>
+                    <cite class="cs-quote-cite">— AI Knowledge Worker</cite>
+                </blockquote>
+
+                <!-- Constraints List -->
+                <div class="cs-constraints">
+                    <h3 class="cs-constraints-title">Initial Constraints</h3>
+                    <ul class="cs-constraints-list">
+                        <li><strong>Limited Budget</strong> — Needed to demonstrate MVP quickly with minimal resources</li>
+                        <li><strong>Investor Validation</strong> — Prove scalable SaaS opportunity and product-market fit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Discovery & Research -->
+        <section class="cs-section cs-section-alt" id="research" aria-labelledby="research-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">02</span>
+                <h2 class="cs-section-title" id="research-title">Discovery & Research</h2>
+                <p class="cs-section-subtitle">Understanding the AI aggregation landscape</p>
+            </header>
+
+            <div class="cs-content">
+                <!-- Research Methodology Cards -->
+                <div class="cs-method-grid">
+                    <article class="cs-method-card">
+                        <h3>Competitive Analysis</h3>
+                        <p>Evaluated 30+ AI tools across features, pricing, and UX patterns</p>
+                        <span class="cs-method-outcome">20-page comprehensive report</span>
+                    </article>
+                    <article class="cs-method-card">
+                        <h3>User Interviews</h3>
+                        <p>12+ interviews with AI researchers and knowledge workers</p>
+                        <span class="cs-method-outcome">Identified 3 core persona types</span>
+                    </article>
+                </div>
+
+                <!-- Comparison Table -->
+                <h3 class="cs-subsection-title">Competitive Analysis Highlights</h3>
+                <div class="cs-table-wrapper">
+                    <table class="cs-table" role="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tool</th>
+                                <th scope="col">Cost</th>
+                                <th scope="col">Features</th>
+                                <th scope="col">UX</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ChatGPT</td>
+                                <td>$$$</td>
+                                <td><span class="cs-rating" aria-label="4 out of 5">●●●●○</span></td>
+                                <td><span class="cs-rating" aria-label="5 out of 5">●●●●●</span></td>
+                            </tr>
+                            <tr>
+                                <td>Claude</td>
+                                <td>$$</td>
+                                <td><span class="cs-rating" aria-label="5 out of 5">●●●●●</span></td>
+                                <td><span class="cs-rating" aria-label="4 out of 5">●●●●○</span></td>
+                            </tr>
+                            <tr>
+                                <td>Midjourney</td>
+                                <td>$$</td>
+                                <td><span class="cs-rating" aria-label="3 out of 5">●●●○○</span></td>
+                                <td><span class="cs-rating" aria-label="3 out of 5">●●●○○</span></td>
+                            </tr>
+                            <tr>
+                                <td>+27 more tools analyzed</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Interview Quotes Grid -->
+                <h3 class="cs-subsection-title">User Interview Highlights</h3>
+                <div class="cs-quotes-grid">
+                    <blockquote class="cs-interview-quote">
+                        <p>"I spend more time managing subscriptions than actually using the AI tools. It's exhausting."</p>
+                        <footer class="cs-quote-footer">
+                            <div class="cs-quote-avatar" aria-hidden="true">SC</div>
+                            <div class="cs-quote-info">
+                                <cite class="cs-quote-name">Sarah Chen</cite>
+                                <span class="cs-quote-role">Product Manager, Tech Startup</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="cs-interview-quote">
+                        <p>"There's no easy way to compare outputs from different models. I have to copy-paste everything manually."</p>
+                        <footer class="cs-quote-footer">
+                            <div class="cs-quote-avatar" aria-hidden="true">ML</div>
+                            <div class="cs-quote-info">
+                                <cite class="cs-quote-name">Dr. Marcus Liu</cite>
+                                <span class="cs-quote-role">AI Researcher</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="cs-interview-quote">
+                        <p>"I need something that works across my entire team, but every tool has different pricing tiers and limitations."</p>
+                        <footer class="cs-quote-footer">
+                            <div class="cs-quote-avatar" aria-hidden="true">JT</div>
+                            <div class="cs-quote-info">
+                                <cite class="cs-quote-name">Jessica Torres</cite>
+                                <span class="cs-quote-role">Creative Director</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Key Insights -->
+                <h3 class="cs-subsection-title">Synthesis & Key Insights</h3>
+                <div class="cs-affinity-map">
+                    <h4 class="cs-affinity-title">Affinity Mapping Session</h4>
+                    <div class="cs-affinity-tags" role="list">
+                        <span class="cs-affinity-tag" role="listitem">Cost Fatigue</span>
+                        <span class="cs-affinity-tag" role="listitem">Tool Switching</span>
+                        <span class="cs-affinity-tag" role="listitem">No Unified Search</span>
+                        <span class="cs-affinity-tag" role="listitem">Comparison Difficulty</span>
+                        <span class="cs-affinity-tag" role="listitem">Team Coordination</span>
+                        <span class="cs-affinity-tag" role="listitem">Subscription Chaos</span>
+                    </div>
+                    <p class="cs-affinity-outcome">Identified patterns from 12+ interviews <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin:0 4px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg> 3 core persona types</p>
+                </div>
+
+                <div class="cs-insights-list">
+                    <article class="cs-insight-card">
+                        <span class="cs-insight-number">Insight #1:</span>
+                        <h4 class="cs-insight-title">Aggregation is the entry point</h4>
+                        <p class="cs-insight-text">Users need a single dashboard to test and compare multiple AI tools before committing to subscriptions.</p>
+                    </article>
+                    <article class="cs-insight-card">
+                        <span class="cs-insight-number">Insight #2:</span>
+                        <h4 class="cs-insight-title">Free tier is critical for adoption</h4>
+                        <p class="cs-insight-text">Lower barrier to entry with free baseline access increases willingness to explore premium features.</p>
+                    </article>
+                    <article class="cs-insight-card">
+                        <span class="cs-insight-number">Insight #3:</span>
+                        <h4 class="cs-insight-title">White-label opportunity for enterprises</h4>
+                        <p class="cs-insight-text">Enterprises want branded AI solutions for their teams, creating a B2B revenue stream beyond subscriptions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Define & Strategize -->
+        <section class="cs-section" id="define" aria-labelledby="define-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">03</span>
+                <h2 class="cs-section-title" id="define-title">Define & Strategize</h2>
+                <p class="cs-section-subtitle">Translating insights into actionable strategy</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- User Personas -->
+                <h3 class="cs-subsection-title">User Personas</h3>
+                <div class="cs-personas-grid">
+                    <article class="cs-persona-card">
+                        <header class="cs-persona-header">
+                            <div class="cs-persona-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                            <div>
+                                <h4 class="cs-persona-name">The Knowledge Worker</h4>
+                                <p class="cs-persona-role">Product Managers, Researchers, Analysts</p>
+                            </div>
+                        </header>
+                        <blockquote class="cs-persona-quote">"I need to quickly test multiple AI models to find the best one for my use case."</blockquote>
+                        <div class="cs-persona-details">
+                            <div class="cs-persona-painpoints">
+                                <h5>Pain Points:</h5>
+                                <ul>
+                                    <li>Cost fatigue from multiple subscriptions</li>
+                                    <li>Time wasted switching between tools</li>
+                                    <li>Difficulty comparing outputs side-by-side</li>
+                                </ul>
+                            </div>
+                            <div class="cs-persona-needs">
+                                <h5>Needs:</h5>
+                                <p>Unified dashboard, comparison tools, transparent pricing</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cs-persona-card">
+                        <header class="cs-persona-header">
+                            <div class="cs-persona-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="16" r="2"></circle><path d="M9 12a6 6 0 0 0 7.5-4.5"></path></svg></div>
+                            <div>
+                                <h4 class="cs-persona-name">The Creative Professional</h4>
+                                <p class="cs-persona-role">Designers, Writers, Content Creators</p>
+                            </div>
+                        </header>
+                        <blockquote class="cs-persona-quote">"I want to experiment with different AI tools without committing to expensive plans."</blockquote>
+                        <div class="cs-persona-details">
+                            <div class="cs-persona-painpoints">
+                                <h5>Pain Points:</h5>
+                                <ul>
+                                    <li>Budget constraints limiting experimentation</li>
+                                    <li>No unified search across AI tools</li>
+                                    <li>Overwhelming number of options</li>
+                                </ul>
+                            </div>
+                            <div class="cs-persona-needs">
+                                <h5>Needs:</h5>
+                                <p>Free tier access, discovery features, creative workflows</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cs-persona-card">
+                        <header class="cs-persona-header">
+                            <div class="cs-persona-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
+                            <div>
+                                <h4 class="cs-persona-name">The Enterprise Decision Maker</h4>
+                                <p class="cs-persona-role">CTOs, Team Leads, Department Heads</p>
+                            </div>
+                        </header>
+                        <blockquote class="cs-persona-quote">"My team needs a centralized AI solution with consistent access and billing."</blockquote>
+                        <div class="cs-persona-details">
+                            <div class="cs-persona-painpoints">
+                                <h5>Pain Points:</h5>
+                                <ul>
+                                    <li>Team coordination across scattered tools</li>
+                                    <li>Lack of white-label solutions</li>
+                                    <li>Complex vendor management</li>
+                                </ul>
+                            </div>
+                            <div class="cs-persona-needs">
+                                <h5>Needs:</h5>
+                                <p>White-label capabilities, team management, enterprise billing</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Design Principles -->
+                <h3 class="cs-subsection-title">Design Principles</h3>
+                <div class="cs-principles-grid">
+                    <article class="cs-principle-card">
+                        <h4 class="cs-principle-title">Simplify Discovery</h4>
+                        <p class="cs-principle-text">Make it effortless for users to find and test the right AI tool for their needs</p>
+                    </article>
+                    <article class="cs-principle-card">
+                        <h4 class="cs-principle-title">Reduce Friction</h4>
+                        <p class="cs-principle-text">Eliminate barriers between user intent and AI-powered outcomes</p>
+                    </article>
+                    <article class="cs-principle-card">
+                        <h4 class="cs-principle-title">Enable Comparison</h4>
+                        <p class="cs-principle-text">Provide clear, side-by-side comparisons of AI tool outputs and features</p>
+                    </article>
+                    <article class="cs-principle-card">
+                        <h4 class="cs-principle-title">Scale Intelligently</h4>
+                        <p class="cs-principle-text">Build a foundation that supports both individual users and enterprise teams</p>
+                    </article>
+                </div>
+
+                <!-- How Might We -->
+                <div class="cs-hmw">
+                    <p class="cs-hmw-main">How might we give users one place to discover and use AI without friction?</p>
+                    <ul class="cs-hmw-list">
+                        <li>...reduce the cost barrier for users who want to experiment with multiple AI tools?</li>
+                        <li>...enable side-by-side comparison of AI outputs without manual copy-pasting?</li>
+                        <li>...create a scalable solution that serves both individuals and enterprise teams?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Design Evolution -->
+        <section class="cs-section cs-section-alt" id="design" aria-labelledby="design-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">04</span>
+                <h2 class="cs-section-title" id="design-title">Design Evolution</h2>
+                <p class="cs-section-subtitle">From rough sketches to refined interface</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- Wireframe Progression Gallery -->
+                <h3 class="cs-subsection-title">Wireframe Progression</h3>
+                <div class="cs-wireframe-gallery">
+                    <figure class="cs-wireframe-item">
+                        <img src="images/casestudies/hyperprompts/HPCaseStudy-mockup5.webp"
+                             alt="Low fidelity wireframe showing full dashboard layout with sidebar navigation and content areas"
+                             loading="lazy"
+                             width="800"
+                             height="500">
+                        <figcaption>
+                            <span class="cs-wireframe-stage">Low Fidelity</span>
+                            <span class="cs-wireframe-desc">Basic structure and layout exploration</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="cs-wireframe-item">
+                        <img src="images/casestudies/hyperprompts/HPCaseStudy-mockup4.webp"
+                             alt="Low fidelity wireframe showing Prompt Settings modal with template controls"
+                             loading="lazy"
+                             width="800"
+                             height="500">
+                        <figcaption>
+                            <span class="cs-wireframe-stage">Low Fidelity</span>
+                            <span class="cs-wireframe-desc">Prompt settings and template management</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="cs-wireframe-item">
+                        <img src="images/casestudies/hyperprompts/HPCaseStudy-mockup3.webp"
+                             alt="Mid fidelity wireframe showing Features panel with ToT, Multiplier, and Variations options"
+                             loading="lazy"
+                             width="800"
+                             height="500">
+                        <figcaption>
+                            <span class="cs-wireframe-stage">Mid Fidelity</span>
+                            <span class="cs-wireframe-desc">Feature controls and configuration</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="cs-wireframe-item">
+                        <img src="images/casestudies/hyperprompts/HPCaseStudy-mockup2.webp"
+                             alt="Mid fidelity wireframe showing team invitation list with status indicators"
+                             loading="lazy"
+                             width="800"
+                             height="500">
+                        <figcaption>
+                            <span class="cs-wireframe-stage">Mid Fidelity</span>
+                            <span class="cs-wireframe-desc">Team management interface</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="cs-wireframe-item cs-wireframe-wide">
+                        <img src="images/casestudies/hyperprompts/HPCaseStudy-mockup1.webp"
+                             alt="High fidelity design showing Giga Prompting feature with variations, multiplier, and quality booster controls"
+                             loading="lazy"
+                             width="1200"
+                             height="700">
+                        <figcaption>
+                            <span class="cs-wireframe-stage">High Fidelity</span>
+                            <span class="cs-wireframe-desc">Giga Prompting feature - final polish</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Roads Not Taken -->
+                <h3 class="cs-subsection-title">The Roads Not Taken</h3>
+                <div class="cs-rejected-grid">
+                    <article class="cs-rejected-card">
+                        <span class="cs-rejected-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                        <h4 class="cs-rejected-title">Tool-First Navigation</h4>
+                        <p class="cs-rejected-reason">Rejected: Users needed workflow-based navigation, not tool categories. This added cognitive load.</p>
+                    </article>
+                    <article class="cs-rejected-card">
+                        <span class="cs-rejected-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                        <h4 class="cs-rejected-title">Dense Top Bar Layout</h4>
+                        <p class="cs-rejected-reason">Rejected: A/B testing showed sidebar navigation performed 35% better for tool discovery and reduced clicks.</p>
+                    </article>
+                </div>
+
+                <!-- Key Decisions -->
+                <h3 class="cs-subsection-title">Key Design Decisions</h3>
+                <ol class="cs-decisions-list">
+                    <li class="cs-decision-item">
+                        <span class="cs-decision-number" aria-hidden="true">1</span>
+                        <div class="cs-decision-content">
+                            <h4 class="cs-decision-title">Sidebar vs. Top Navigation</h4>
+                            <p class="cs-decision-text">A/B testing revealed that sidebar navigation improved tool discoverability by 35% and reduced clicks to target tools. Users found it easier to scan vertically through tool categories.</p>
+                        </div>
+                    </li>
+                    <li class="cs-decision-item">
+                        <span class="cs-decision-number" aria-hidden="true">2</span>
+                        <div class="cs-decision-content">
+                            <h4 class="cs-decision-title">Card-Based vs. List View</h4>
+                            <p class="cs-decision-text">Card-based layouts tested better for tool browsing, providing visual hierarchy and quick scanning. List view reserved for detailed comparisons.</p>
+                        </div>
+                    </li>
+                    <li class="cs-decision-item">
+                        <span class="cs-decision-number" aria-hidden="true">3</span>
+                        <div class="cs-decision-content">
+                            <h4 class="cs-decision-title">Unified Search Bar Placement</h4>
+                            <p class="cs-decision-text">Prominent search placement at the top center became the primary entry point, enabling cross-tool search that users consistently requested.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Testing & Validation -->
+        <section class="cs-section" id="testing" aria-labelledby="testing-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">05</span>
+                <h2 class="cs-section-title" id="testing-title">Testing & Validation</h2>
+                <p class="cs-section-subtitle">Data-driven iteration and refinement</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- Testing Approach Stats -->
+                <div class="cs-testing-stats">
+                    <div class="cs-testing-stat">
+                        <span class="cs-testing-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+                        <span class="cs-testing-value">10</span>
+                        <span class="cs-testing-label">Usability Testing Sessions</span>
+                    </div>
+                    <div class="cs-testing-stat">
+                        <span class="cs-testing-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span>
+                        <span class="cs-testing-value">3</span>
+                        <span class="cs-testing-label">Design Iteration Cycles</span>
+                    </div>
+                    <div class="cs-testing-stat">
+                        <span class="cs-testing-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></span>
+                        <span class="cs-testing-value">A/B</span>
+                        <span class="cs-testing-label">Navigation Patterns Tested</span>
+                    </div>
+                </div>
+
+                <!-- A/B Test Comparison -->
+                <h3 class="cs-subsection-title">A/B Test: Navigation Pattern</h3>
+                <div class="cs-ab-test">
+                    <div class="cs-ab-variant cs-ab-winner">
+                        <span class="cs-ab-badge">Winner <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-left:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                        <h4 class="cs-ab-title">Sidebar Navigation</h4>
+                        <ul class="cs-ab-metrics">
+                            <li><span>Avg. clicks to tool:</span> <strong>2.1</strong> <span class="cs-change positive">↓35%</span></li>
+                            <li><span>Discovery rate:</span> <strong>84%</strong> <span class="cs-change positive">↑22%</span></li>
+                            <li><span>User satisfaction:</span> <strong>8.9/10</strong> <span class="cs-change positive">↑31%</span></li>
+                        </ul>
+                    </div>
+                    <div class="cs-ab-variant">
+                        <span class="cs-ab-badge">Version B</span>
+                        <h4 class="cs-ab-title">Top Bar Navigation</h4>
+                        <ul class="cs-ab-metrics">
+                            <li><span>Avg. clicks to tool:</span> <strong>3.2</strong></li>
+                            <li><span>Discovery rate:</span> <strong>62%</strong></li>
+                            <li><span>User satisfaction:</span> <strong>6.8/10</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="cs-ab-result">Result: Sidebar navigation improved discoverability by 35% and reduced clicks to target tools, validating our design direction for tool density and organization.</p>
+
+                <!-- Iteration Timeline -->
+                <h3 class="cs-subsection-title">Iteration Timeline</h3>
+                <div class="cs-iteration-timeline">
+                    <article class="cs-iteration">
+                        <div class="cs-iteration-marker" aria-hidden="true"></div>
+                        <div class="cs-iteration-content">
+                            <span class="cs-iteration-period">Iteration 1 • Week 1-2</span>
+                            <h4 class="cs-iteration-title">Initial Prototype Testing</h4>
+                            <p>Tested with 5 users. Discovered navigation confusion and unclear tool categorization.</p>
+                            <p class="cs-iteration-change"><strong>Key Change:</strong> Refined sidebar navigation for better tool density</p>
+                        </div>
+                    </article>
+                    <article class="cs-iteration">
+                        <div class="cs-iteration-marker" aria-hidden="true"></div>
+                        <div class="cs-iteration-content">
+                            <span class="cs-iteration-period">Iteration 2 • Week 3-4</span>
+                            <h4 class="cs-iteration-title">Refined Navigation & Cards</h4>
+                            <p>A/B tested navigation patterns. Sidebar showed 35% improvement in discoverability.</p>
+                            <p class="cs-iteration-change"><strong>Key Change:</strong> Enhanced card layout with better visual hierarchy</p>
+                        </div>
+                    </article>
+                    <article class="cs-iteration">
+                        <div class="cs-iteration-marker" aria-hidden="true"></div>
+                        <div class="cs-iteration-content">
+                            <span class="cs-iteration-period">Iteration 3 • Week 5-6</span>
+                            <h4 class="cs-iteration-title">Final Polish & Validation</h4>
+                            <p>Final testing with 3 users. User satisfaction increased to 8.9/10. Ready for investor demo.</p>
+                            <p class="cs-iteration-change"><strong>Key Change:</strong> Pricing clarity improvements based on feedback</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Improvement Metrics -->
+                <div class="cs-improvements-bar">
+                    <div class="cs-improvement">
+                        <span class="cs-improvement-value">35%</span>
+                        <span class="cs-improvement-label">Improved Discoverability</span>
+                    </div>
+                    <div class="cs-improvement">
+                        <span class="cs-improvement-value">-34%</span>
+                        <span class="cs-improvement-label">Reduced Click Count</span>
+                    </div>
+                    <div class="cs-improvement">
+                        <span class="cs-improvement-value">8.9/10</span>
+                        <span class="cs-improvement-label">User Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: The Solution -->
+        <section class="cs-section cs-section-alt" id="solution" aria-labelledby="solution-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">06</span>
+                <h2 class="cs-section-title" id="solution-title">The Solution</h2>
+                <p class="cs-section-subtitle">A unified platform for AI discovery and use</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <p class="cs-solution-intro">Hyper Prompts aggregates 30+ AI tools into a single, intuitive dashboard. Users can discover, test, and compare AI models without managing multiple subscriptions or switching contexts.</p>
+
+                <!-- Feature Showcase -->
+                <h3 class="cs-subsection-title">Key Features</h3>
+                <div class="cs-features-grid">
+                    <article class="cs-feature-card cs-feature-large">
+                        <figure class="cs-feature-image">
+                            <img src="images/casestudies/hyperprompts/HPCaseStudy-prototype3.webp"
+                                 alt="AI Library interface showing categorized agents like Talos, Barnaby, Support, and text models like Claude 3 Opus, GPT-4"
+                                 loading="lazy"
+                                 width="1200"
+                                 height="700">
+                        </figure>
+                        <div class="cs-feature-content">
+                            <h4 class="cs-feature-title">Unified AI Library</h4>
+                            <p class="cs-feature-desc">Browse and filter through 30+ AI tools in a single interface. Smart categorization by use case (text, image, code, analysis) makes discovery effortless.</p>
+                            <span class="cs-feature-tag">CORE FEATURE</span>
+                        </div>
+                    </article>
+
+                    <article class="cs-feature-card">
+                        <figure class="cs-feature-image">
+                            <img src="images/casestudies/hyperprompts/HPCaseStudy-prototype2.webp"
+                                 alt="Conversation view showing AI responses with variations - multiple response options for the same prompt"
+                                 loading="lazy"
+                                 width="800"
+                                 height="500">
+                        </figure>
+                        <div class="cs-feature-content">
+                            <h4 class="cs-feature-title">Smart Comparison Tool</h4>
+                            <p class="cs-feature-desc">Compare outputs from multiple AI models side-by-side with the same prompt. Instantly identify which tool delivers the best results.</p>
+                            <span class="cs-feature-tag">USER REQUESTED</span>
+                        </div>
+                    </article>
+
+                    <article class="cs-feature-card">
+                        <figure class="cs-feature-image">
+                            <img src="images/casestudies/hyperprompts/HPCaseStudy-prototype1.webp"
+                                 alt="Sign up page with friendly illustration and 42X Prompting Accelerator branding"
+                                 loading="lazy"
+                                 width="800"
+                                 height="500">
+                        </figure>
+                        <div class="cs-feature-content">
+                            <h4 class="cs-feature-title">Frictionless Onboarding</h4>
+                            <p class="cs-feature-desc">Get started in seconds with a streamlined sign-up flow. No credit card required for free tier access.</p>
+                            <span class="cs-feature-tag">CONVERSION</span>
+                        </div>
+                    </article>
+
+                    <article class="cs-feature-card">
+                        <figure class="cs-feature-image">
+                            <img src="images/casestudies/hyperprompts/HPCaseStudy-prototype4.webp"
+                                 alt="Service Plans page showing pricing tiers from Free to Enterprise with robot mascots"
+                                 loading="lazy"
+                                 width="800"
+                                 height="500">
+                        </figure>
+                        <div class="cs-feature-content">
+                            <h4 class="cs-feature-title">Flexible Pricing</h4>
+                            <p class="cs-feature-desc">Clear pricing tiers from free to enterprise, with transparent credit systems. Users know exactly what they're paying for.</p>
+                            <span class="cs-feature-tag">MONETIZATION</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Accessibility -->
+                <div class="cs-accessibility">
+                    <h3 class="cs-subsection-title">Accessibility Features</h3>
+                    <ul class="cs-a11y-list">
+                        <li class="cs-a11y-item">
+                            <span class="cs-a11y-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            <div>
+                                <strong>Keyboard Navigation</strong>
+                                <span>Full keyboard support for all interactions</span>
+                            </div>
+                        </li>
+                        <li class="cs-a11y-item">
+                            <span class="cs-a11y-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            <div>
+                                <strong>Screen Reader Optimized</strong>
+                                <span>Semantic HTML with ARIA labels</span>
+                            </div>
+                        </li>
+                        <li class="cs-a11y-item">
+                            <span class="cs-a11y-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            <div>
+                                <strong>High Contrast Mode</strong>
+                                <span>4.5:1 contrast ratio minimum</span>
+                            </div>
+                        </li>
+                        <li class="cs-a11y-item">
+                            <span class="cs-a11y-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            <div>
+                                <strong>Responsive Text Scaling</strong>
+                                <span>Supports up to 200% zoom</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: Impact & Results -->
+        <section class="cs-section" id="impact" aria-labelledby="impact-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">07</span>
+                <h2 class="cs-section-title" id="impact-title">Impact & Results</h2>
+                <p class="cs-section-subtitle">Measurable success and business validation</p>
+            </header>
+
+            <div class="cs-content">
+                <!-- Big Numbers -->
+                <div class="cs-impact-numbers">
+                    <div class="cs-impact-card cs-impact-primary">
+                        <span class="cs-impact-value">$250K</span>
+                        <span class="cs-impact-label">Seed Funding Secured</span>
+                        <span class="cs-impact-context">Investment from strategic partners</span>
+                    </div>
+                    <div class="cs-impact-card">
+                        <span class="cs-impact-value">$140K</span>
+                        <span class="cs-impact-label">Client Sales Generated</span>
+                        <span class="cs-impact-context">White-label contracts closed</span>
+                    </div>
+                </div>
+
+                <!-- Results Table -->
+                <h3 class="cs-subsection-title">Before vs. After Launch</h3>
+                <div class="cs-table-wrapper">
+                    <table class="cs-table cs-results-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Metric</th>
+                                <th scope="col">Before</th>
+                                <th scope="col">After</th>
+                                <th scope="col">Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tool Discoverability</td>
+                                <td>62%</td>
+                                <td>84%</td>
+                                <td><span class="cs-change positive">+35%</span></td>
+                            </tr>
+                            <tr>
+                                <td>User Satisfaction</td>
+                                <td>6.8/10</td>
+                                <td>8.9/10</td>
+                                <td><span class="cs-change positive">+31%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Product-Market Fit</td>
+                                <td>Unvalidated</td>
+                                <td>Validated</td>
+                                <td><span class="cs-change positive"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Business Impact -->
+                <div class="cs-business-impact">
+                    <div class="cs-business-stat">
+                        <span class="cs-business-value">7</span>
+                        <span class="cs-business-label">Months to Launch</span>
+                    </div>
+                    <div class="cs-business-stat">
+                        <span class="cs-business-value">30+</span>
+                        <span class="cs-business-label">AI Tools Integrated</span>
+                    </div>
+                    <div class="cs-business-stat">
+                        <span class="cs-business-value">100%</span>
+                        <span class="cs-business-label">MVP Delivered</span>
+                    </div>
+                </div>
+
+                <!-- Achievement List -->
+                <h3 class="cs-subsection-title">Key Achievements</h3>
+                <div class="cs-achievements">
+                    <ul class="cs-achievements-list">
+                        <li class="cs-achievement">
+                            <span class="cs-achievement-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Secured $250K in seed funding through compelling design presentation
+                        </li>
+                        <li class="cs-achievement">
+                            <span class="cs-achievement-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Generated $140K in white-label client contracts
+                        </li>
+                        <li class="cs-achievement">
+                            <span class="cs-achievement-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Validated product-market fit through data-driven testing
+                        </li>
+                        <li class="cs-achievement">
+                            <span class="cs-achievement-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Built scalable design system for rapid deployment
+                        </li>
+                        <li class="cs-achievement">
+                            <span class="cs-achievement-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Improved user satisfaction by 31% through iterative testing
+                        </li>
+                        <li class="cs-achievement">
+                            <span class="cs-achievement-check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                            Delivered complete MVP within 7-month timeline
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Reflection -->
+        <section class="cs-section cs-section-alt" id="reflection" aria-labelledby="reflection-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">08</span>
+                <h2 class="cs-section-title" id="reflection-title">Reflection & Growth</h2>
+                <p class="cs-section-subtitle">Lessons learned and growth mindset</p>
+            </header>
+
+            <div class="cs-content">
+                <!-- Key Learnings -->
+                <h3 class="cs-subsection-title">Key Learnings</h3>
+                <div class="cs-learnings-grid">
+                    <article class="cs-learning-card">
+                        <span class="cs-learning-number" aria-hidden="true">1</span>
+                        <div class="cs-learning-content">
+                            <h4>Designing for investors is designing for users</h4>
+                            <p>The biggest insight was realizing that investor demos aren't just about aesthetics—they're about proving you understand your users deeply. Every design decision I presented to investors was rooted in research data and user pain points.</p>
+                        </div>
+                    </article>
+                    <article class="cs-learning-card">
+                        <span class="cs-learning-number" aria-hidden="true">2</span>
+                        <div class="cs-learning-content">
+                            <h4>A/B testing saves months of debate</h4>
+                            <p>Rather than relying on opinions about navigation patterns, we ran A/B tests early. The data showed definitively that sidebar navigation outperformed top bar by 35%. Let the users decide.</p>
+                        </div>
+                    </article>
+                    <article class="cs-learning-card">
+                        <span class="cs-learning-number" aria-hidden="true">3</span>
+                        <div class="cs-learning-content">
+                            <h4>Design systems aren't overhead—they're accelerators</h4>
+                            <p>Building a scalable design system upfront felt like it would slow us down, but it became our competitive advantage. When we landed white-label contracts, we could customize and deploy in days instead of weeks.</p>
+                        </div>
+                    </article>
+                    <article class="cs-learning-card">
+                        <span class="cs-learning-number" aria-hidden="true">4</span>
+                        <div class="cs-learning-content">
+                            <h4>User interviews reveal what surveys cannot</h4>
+                            <p>The most valuable insights came from watching users struggle with existing AI tools during interviews. They couldn't articulate "I need unified search" in a survey, but watching them copy-paste between tabs made the problem crystal clear.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- What I'd Do Differently -->
+                <h3 class="cs-subsection-title">What I'd Do Differently</h3>
+                <div class="cs-retro-list">
+                    <article class="cs-retro-item">
+                        <h4>Integrate pricing experiments earlier</h4>
+                        <p>We waited until iteration 3 to test pricing clarity. Users were confused about tier differences earlier, and we could have validated pricing presentation alongside navigation patterns.</p>
+                    </article>
+                    <article class="cs-retro-item">
+                        <h4>Document decision rationale in real-time</h4>
+                        <p>I kept mental notes about why we chose certain directions, but documenting them immediately would have saved time when stakeholders asked "why did we do it this way?" months later.</p>
+                    </article>
+                    <article class="cs-retro-item">
+                        <h4>Involve engineering earlier in design system planning</h4>
+                        <p>While the design system was scalable visually, some component decisions created implementation challenges. Having engineering input during the design system phase would have resulted in components that were both beautiful and technically optimal.</p>
+                    </article>
+                </div>
+
+                <!-- Behind the Scenes -->
+                <h3 class="cs-subsection-title">Behind the Scenes</h3>
+                <div class="cs-stories-grid">
+                    <article class="cs-story-card">
+                        <span class="cs-story-label">Week 2 Challenge</span>
+                        <h4 class="cs-story-title">The "Everyone Has a Different Vision" Problem</h4>
+                        <p class="cs-story-text">Three founders, three completely different ideas about what the product should be. I facilitated a workshop where we mapped each founder's vision against user research data. When we saw that two out of three visions didn't match user needs, the decision became obvious.</p>
+                        <p class="cs-story-outcome"><strong>Outcome:</strong> Aligned on a single product direction backed by research, saving weeks of debate.</p>
+                    </article>
+                    <article class="cs-story-card">
+                        <span class="cs-story-label">Week 4 Challenge</span>
+                        <h4 class="cs-story-title">The Usability Test That Went Wrong</h4>
+                        <p class="cs-story-text">During iteration 2 testing, a participant got frustrated and said "this is way too complicated" and quit the session early. Initially devastating, but their feedback revealed a fundamental flaw in our navigation logic.</p>
+                        <p class="cs-story-outcome"><strong>Outcome:</strong> Negative feedback became the catalyst for our best design decision.</p>
+                    </article>
+                    <article class="cs-story-card">
+                        <span class="cs-story-label">Week 6 Challenge</span>
+                        <h4 class="cs-story-title">Investor Demo 48 Hours Away, Design Not Ready</h4>
+                        <p class="cs-story-text">We had a major investor meeting scheduled, but the prototype had bugs and the pitch deck needed design updates. Instead of panicking, I prioritized ruthlessly: polished only the 3 screens investors would see.</p>
+                        <p class="cs-story-outcome"><strong>Outcome:</strong> Learned that strategic imperfection beats delayed perfection.</p>
+                    </article>
+                </div>
+
+                <!-- Final Quote -->
+                <blockquote class="cs-final-quote">
+                    <p>"The best design projects are the ones that humble you, challenge your assumptions, and force you to grow. Hyper Prompts did all three."</p>
+                    <footer>
+                        <cite>Jacob Gruver</cite>
+                        <span>End-to-End Designer</span>
+                    </footer>
+                </blockquote>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Navigation -->
+    <footer class="cs-footer">
+        <nav class="cs-footer-nav" aria-label="More case studies">
+            <a href="index.html#case-studies" class="cs-footer-link">← Back to All Case Studies</a>
+            <a href="index.html#contact" class="cs-footer-link">Get in Touch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-left:4px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </nav>
+        <p class="cs-copyright">© 2026 Jacob Gruver. Designed with compassion.</p>
+    </footer>
+
+    <script>
+        // === Case Study Page JavaScript ===
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Smooth scroll for anchor links
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = document.querySelector('.cs-nav')?.offsetHeight || 52;
+                        const overviewHeight = document.querySelector('.cs-overview-bar')?.offsetHeight || 80;
+                        const offset = navHeight + overviewHeight + 20;
+
+                        window.scrollTo({
+                            top: target.offsetTop - offset,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 2. Intersection Observer for scroll animations (respects prefers-reduced-motion)
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (!prefersReducedMotion) {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const fadeInObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('cs-visible');
+                            fadeInObserver.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all animatable elements
+                const animatableElements = document.querySelectorAll(
+                    '.cs-stat-card, .cs-persona-card, .cs-feature-card, .cs-learning-card, ' +
+                    '.cs-interview-quote, .cs-wireframe-item, .cs-iteration, .cs-story-card, ' +
+                    '.cs-insight-card, .cs-method-card, .cs-principle-card, .cs-rejected-card'
+                );
+                animatableElements.forEach(el => {
+                    el.classList.add('cs-animate');
+                    fadeInObserver.observe(el);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
