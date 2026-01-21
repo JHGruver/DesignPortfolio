@@ -26,8 +26,38 @@
 </head>
 <body class="casestudy-body">
 
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="cs-skip-link">Skip to main content</a>
+    <!-- Progress Bar -->
+    <div class="cs-progress-bar" aria-hidden="true">
+        <div class="cs-progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Section Progress Dots -->
+    <nav class="cs-section-progress" aria-label="Section navigation">
+        <button class="cs-progress-dot" data-section="challenge" aria-label="Go to The Challenge section">
+            <span class="cs-progress-dot-label">The Challenge</span>
+        </button>
+        <button class="cs-progress-dot" data-section="research" aria-label="Go to Discovery section">
+            <span class="cs-progress-dot-label">Discovery</span>
+        </button>
+        <button class="cs-progress-dot" data-section="define" aria-label="Go to Strategy section">
+            <span class="cs-progress-dot-label">Strategy</span>
+        </button>
+        <button class="cs-progress-dot" data-section="design" aria-label="Go to Design section">
+            <span class="cs-progress-dot-label">Design</span>
+        </button>
+        <button class="cs-progress-dot" data-section="testing" aria-label="Go to Testing section">
+            <span class="cs-progress-dot-label">Testing</span>
+        </button>
+        <button class="cs-progress-dot" data-section="solution" aria-label="Go to Solution section">
+            <span class="cs-progress-dot-label">Solution</span>
+        </button>
+        <button class="cs-progress-dot" data-section="impact" aria-label="Go to Impact section">
+            <span class="cs-progress-dot-label">Impact</span>
+        </button>
+        <button class="cs-progress-dot" data-section="reflection" aria-label="Go to Reflection section">
+            <span class="cs-progress-dot-label">Reflection</span>
+        </button>
+    </nav>
 
     <!-- Back Navigation -->
     <nav class="cs-nav" aria-label="Case study navigation">
@@ -61,24 +91,84 @@
 
     <!-- SECTION 2: Project Overview Bar (Sticky) -->
     <aside class="cs-overview-bar" aria-label="Project overview">
-        <div class="cs-overview-item">
-            <h3 class="cs-overview-heading">Duration & Team</h3>
-            <p class="cs-overview-value">7 Months</p>
-            <p class="cs-overview-detail">3 Founders + Dev Team<br>July 2023 – Feb 2024</p>
-        </div>
-        <div class="cs-overview-item">
-            <h3 class="cs-overview-heading">My Role</h3>
-            <p class="cs-overview-value">Sole Designer</p>
-            <p class="cs-overview-detail">End-to-End UX/UI<br>Research, Design System, Pitch Support</p>
-        </div>
-        <div class="cs-overview-item">
-            <h3 class="cs-overview-heading">Tools & Methods</h3>
-            <p class="cs-overview-value">Figma, Notion, Miro</p>
-            <p class="cs-overview-detail">User Interviews<br>Competitive Analysis</p>
+        <div class="cs-overview-content">
+            <div class="cs-overview-item">
+                <span class="cs-overview-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
+                <div class="cs-overview-text">
+                    <span class="cs-overview-label">Duration</span>
+                    <span class="cs-overview-value">7 Months <span class="cs-overview-date">Jul 2023 – Feb 2024</span></span>
+                </div>
+            </div>
+            <div class="cs-overview-divider" aria-hidden="true"></div>
+            <div class="cs-overview-item">
+                <span class="cs-overview-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </span>
+                <div class="cs-overview-text">
+                    <span class="cs-overview-label">Role</span>
+                    <span class="cs-overview-value">Sole Designer — End-to-End UX/UI</span>
+                </div>
+            </div>
+            <div class="cs-overview-divider" aria-hidden="true"></div>
+            <div class="cs-overview-item">
+                <span class="cs-overview-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </span>
+                <div class="cs-overview-text">
+                    <span class="cs-overview-label">Tools</span>
+                    <span class="cs-overview-value">Figma, Notion, Miro</span>
+                </div>
+            </div>
         </div>
     </aside>
 
     <main id="main-content" class="cs-main" role="main">
+
+        <!-- Table of Contents -->
+        <nav class="cs-toc" aria-label="Table of contents">
+            <button class="cs-toc-toggle" aria-expanded="false" aria-controls="toc-content">
+                <span>Table of Contents</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="cs-toc-content" id="toc-content">
+                <ol class="cs-toc-list">
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">01</span>
+                        <a href="#challenge" class="cs-toc-link">The Challenge</a>
+                    </li>
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">02</span>
+                        <a href="#research" class="cs-toc-link">Discovery & Research</a>
+                    </li>
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">03</span>
+                        <a href="#define" class="cs-toc-link">Define & Strategize</a>
+                    </li>
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">04</span>
+                        <a href="#design" class="cs-toc-link">Design Evolution</a>
+                    </li>
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">05</span>
+                        <a href="#testing" class="cs-toc-link">Testing & Validation</a>
+                    </li>
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">06</span>
+                        <a href="#solution" class="cs-toc-link">The Solution</a>
+                    </li>
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">07</span>
+                        <a href="#impact" class="cs-toc-link">Impact & Results</a>
+                    </li>
+                    <li class="cs-toc-item">
+                        <span class="cs-toc-number">08</span>
+                        <a href="#reflection" class="cs-toc-link">Reflection & Growth</a>
+                    </li>
+                </ol>
+            </div>
+        </nav>
 
         <!-- SECTION 3: The Challenge -->
         <section class="cs-section" id="challenge" aria-labelledby="challenge-title">
@@ -567,6 +657,7 @@
                     </div>
                 </div>
                 <p class="cs-ab-result">Result: Sidebar navigation improved discoverability by 35% and reduced clicks to target tools, validating our design direction for tool density and organization.</p>
+                <p class="cs-ab-note"><em>Note: Testing conducted with 10 participants (5 per variant). Results informed design direction but sample size limits statistical significance.</em></p>
 
                 <!-- Iteration Timeline -->
                 <h3 class="cs-subsection-title">Iteration Timeline</h3>
@@ -948,6 +1039,36 @@
 
     </main>
 
+    <!-- Related Case Study -->
+    <section class="cs-related" aria-labelledby="related-heading">
+        <span class="cs-related-label">Continue Reading</span>
+        <h2 class="cs-related-title" id="related-heading">Explore Another Case Study</h2>
+        <a href="casestudy-cloudcar.html" class="cs-related-card">
+            <img src="images/casestudies/cloudcar/cloudcar-online-media-application-Hero.webp" alt="CloudCar infotainment interface" class="cs-related-image" loading="lazy">
+            <div class="cs-related-content">
+                <span class="cs-related-project-label">Automotive UX</span>
+                <h3 class="cs-related-project-title">In-Vehicle Infotainment for Jaguar Land Rover</h3>
+                <p class="cs-related-project-desc">Refining media flows for 30M+ vehicles while prioritizing driver safety and luxury brand standards.</p>
+                <span class="cs-related-cta">
+                    Read Case Study
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+            </div>
+        </a>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cs-contact-cta" aria-labelledby="cta-heading">
+        <div class="cs-cta-content">
+            <h2 class="cs-cta-title" id="cta-heading">Interested in working together?</h2>
+            <p class="cs-cta-text">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            <a href="mailto:jgruver@gmail.com" class="cs-cta-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                jgruver@gmail.com
+            </a>
+        </div>
+    </section>
+
     <!-- Footer Navigation -->
     <footer class="cs-footer">
         <nav class="cs-footer-nav" aria-label="More case studies">
@@ -960,7 +1081,55 @@
     <script>
         // === Case Study Page JavaScript ===
         document.addEventListener('DOMContentLoaded', function() {
-            // 1. Smooth scroll for anchor links
+            // 1. Progress Bar - Update on scroll
+            const progressFill = document.getElementById('progressFill');
+            const updateProgressBar = () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                progressFill.style.width = scrollPercent + '%';
+            };
+            window.addEventListener('scroll', updateProgressBar, { passive: true });
+            updateProgressBar();
+
+            // 2. Section Progress Dots - Click navigation and active state
+            const progressDots = document.querySelectorAll('.cs-progress-dot');
+            const sections = [];
+
+            progressDots.forEach(dot => {
+                const sectionId = dot.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    sections.push({ dot, section });
+                    dot.addEventListener('click', () => {
+                        const navHeight = document.querySelector('.cs-nav')?.offsetHeight || 52;
+                        const overviewHeight = document.querySelector('.cs-overview-bar')?.offsetHeight || 80;
+                        const offset = navHeight + overviewHeight + 20;
+                        window.scrollTo({
+                            top: section.offsetTop - offset,
+                            behavior: 'smooth'
+                        });
+                    });
+                }
+            });
+
+            // Update active dot on scroll
+            const updateActiveDot = () => {
+                const scrollPos = window.scrollY + window.innerHeight / 3;
+                let activeIndex = 0;
+                sections.forEach((item, index) => {
+                    if (scrollPos >= item.section.offsetTop) {
+                        activeIndex = index;
+                    }
+                });
+                progressDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeIndex);
+                });
+            };
+            window.addEventListener('scroll', updateActiveDot, { passive: true });
+            updateActiveDot();
+
+            // 3. Smooth scroll for anchor links
             const anchorLinks = document.querySelectorAll('a[href^="#"]');
             anchorLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
@@ -980,7 +1149,18 @@
                 });
             });
 
-            // 2. Intersection Observer for scroll animations (respects prefers-reduced-motion)
+            // 4. Table of Contents Toggle
+            const tocToggle = document.querySelector('.cs-toc-toggle');
+            const tocContent = document.querySelector('.cs-toc-content');
+            if (tocToggle && tocContent) {
+                tocToggle.addEventListener('click', () => {
+                    const isOpen = tocContent.classList.toggle('open');
+                    tocToggle.classList.toggle('active', isOpen);
+                    tocToggle.setAttribute('aria-expanded', isOpen);
+                });
+            }
+
+            // 5. Intersection Observer for scroll animations (respects prefers-reduced-motion)
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
             if (!prefersReducedMotion) {

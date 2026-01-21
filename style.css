@@ -26728,6 +26728,25 @@ html.theme-mentor .cs-overview-value {
     color: #333 !important;
 }
 
+html.theme-mentor .cs-overview-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+}
+
+html.theme-mentor .cs-overview-date {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    color: #888 !important;
+    margin-left: 8px !important;
+}
+
+html.theme-mentor .cs-overview-divider {
+    width: 1px !important;
+    height: 32px !important;
+    background: rgba(156, 39, 176, 0.15) !important;
+}
+
 /* Main Content Sections */
 html.theme-mentor .cs-section {
     padding: 80px 40px !important;
@@ -27452,6 +27471,17 @@ html.theme-mentor .cs-ab-metric-label {
     color: #888 !important;
 }
 
+html.theme-mentor .cs-ab-note {
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-size: 13px !important;
+    color: #777 !important;
+    margin-top: 16px !important;
+    padding: 12px 16px !important;
+    background: rgba(156, 39, 176, 0.04) !important;
+    border-radius: 8px !important;
+    border-left: 3px solid rgba(156, 39, 176, 0.2) !important;
+}
+
 /* Feature Cards */
 html.theme-mentor .cs-features {
     display: grid !important;
@@ -27724,6 +27754,61 @@ html.theme-mentor .cs-footer-text {
     color: #888 !important;
 }
 
+/* Contact CTA Section */
+html.theme-mentor .cs-contact-cta {
+    background: linear-gradient(135deg, #f3e5f5 0%, #fce4ec 100%) !important;
+    padding: 80px 40px !important;
+    text-align: center !important;
+}
+
+html.theme-mentor .cs-cta-content {
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+html.theme-mentor .cs-cta-title {
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #2d2d2d !important;
+    margin-bottom: 16px !important;
+}
+
+html.theme-mentor .cs-cta-text {
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    color: #555 !important;
+    margin-bottom: 32px !important;
+}
+
+html.theme-mentor .cs-cta-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: #9c27b0 !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-family: 'Lexend', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 16px 32px !important;
+    border-radius: 50px !important;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 4px 20px rgba(156, 39, 176, 0.3) !important;
+}
+
+html.theme-mentor .cs-cta-button:hover {
+    background: #7b1fa2 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 30px rgba(156, 39, 176, 0.4) !important;
+}
+
+html.theme-mentor .cs-cta-button svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
 /* Scroll Animations */
 html.theme-mentor .cs-animate {
     opacity: 0 !important;
@@ -27815,6 +27900,22 @@ html.theme-mentor .cs-animate.cs-visible {
     html.theme-mentor .cs-overview-content {
         flex-direction: column !important;
         gap: 16px !important;
+        align-items: flex-start !important;
+    }
+
+    html.theme-mentor .cs-overview-divider {
+        display: none !important;
+    }
+
+    html.theme-mentor .cs-overview-item {
+        width: 100% !important;
+        padding-bottom: 12px !important;
+        border-bottom: 1px solid rgba(156, 39, 176, 0.1) !important;
+    }
+
+    html.theme-mentor .cs-overview-item:last-child {
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
     }
 
     html.theme-mentor .cs-section,
@@ -29921,4 +30022,747 @@ html.theme-mentor .cs-final-result {
 html.theme-mentor .cs-final-image {
     border-radius: 32px;
     box-shadow: 0 32px 100px rgba(156,39,176,0.15);
+}
+
+/* =====================================================
+   PROGRESS INDICATOR - Scroll Progress for Case Studies
+   ===================================================== */
+
+/* Progress Bar Container */
+.cs-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+}
+
+.cs-progress-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+/* Theme-specific progress bar colors */
+html.theme-mentor .cs-progress-fill {
+    background: linear-gradient(90deg, #9c27b0, #e040fb);
+}
+
+html.theme-undecided .cs-progress-fill {
+    background: #1a1a1a;
+}
+
+html.theme-designer .cs-progress-fill {
+    background: linear-gradient(90deg, #ff6b00, #ffab40);
+}
+
+html.theme-business .cs-progress-fill {
+    background: linear-gradient(90deg, #003366, #0066cc);
+}
+
+html.theme-classic .cs-progress-fill {
+    background: #2d2d2d;
+}
+
+/* Section Progress Dots (Right Side) */
+.cs-section-progress {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cs-progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cs-progress-dot:hover {
+    transform: scale(1.3);
+}
+
+.cs-progress-dot.active {
+    transform: scale(1.2);
+}
+
+.cs-progress-dot-label {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.cs-progress-dot:hover .cs-progress-dot-label {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Theme-specific dot colors */
+html.theme-mentor .cs-progress-dot {
+    background: rgba(156, 39, 176, 0.2);
+}
+
+html.theme-mentor .cs-progress-dot.active {
+    background: #9c27b0;
+    box-shadow: 0 0 12px rgba(156, 39, 176, 0.5);
+}
+
+html.theme-undecided .cs-progress-dot {
+    background: rgba(26, 26, 26, 0.2);
+}
+
+html.theme-undecided .cs-progress-dot.active {
+    background: #1a1a1a;
+    box-shadow: 0 0 12px rgba(26, 26, 26, 0.3);
+}
+
+html.theme-designer .cs-progress-dot {
+    background: rgba(255, 107, 0, 0.2);
+}
+
+html.theme-designer .cs-progress-dot.active {
+    background: #ff6b00;
+    box-shadow: 0 0 12px rgba(255, 107, 0, 0.5);
+}
+
+html.theme-business .cs-progress-dot {
+    background: rgba(0, 51, 102, 0.2);
+}
+
+html.theme-business .cs-progress-dot.active {
+    background: #003366;
+    box-shadow: 0 0 12px rgba(0, 51, 102, 0.3);
+}
+
+html.theme-classic .cs-progress-dot {
+    background: rgba(45, 45, 45, 0.2);
+}
+
+html.theme-classic .cs-progress-dot.active {
+    background: #2d2d2d;
+    box-shadow: 0 0 12px rgba(45, 45, 45, 0.3);
+}
+
+/* Hide progress dots on mobile/tablet */
+@media (max-width: 1100px) {
+    .cs-section-progress {
+        display: none;
+    }
+}
+
+/* =====================================================
+   RELATED CASE STUDY - Suggestion at End of Case Study
+   ===================================================== */
+
+.cs-related {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.cs-related-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.cs-related-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cs-related-card {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-decoration: none;
+    padding: 24px;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+.cs-related-card:hover {
+    transform: translateY(-4px);
+}
+
+.cs-related-image {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.cs-related-content {
+    flex: 1;
+}
+
+.cs-related-project-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.cs-related-project-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cs-related-project-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.cs-related-cta {
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cs-related-cta svg {
+    transition: transform 0.3s ease;
+}
+
+.cs-related-card:hover .cs-related-cta svg {
+    transform: translateX(4px);
+}
+
+/* Theme-specific Related Section Styles */
+
+/* Mentor Theme */
+html.theme-mentor .cs-related {
+    background: #faf5fc;
+}
+
+html.theme-mentor .cs-related-label {
+    color: #9c27b0;
+}
+
+html.theme-mentor .cs-related-title {
+    font-family: 'Lexend', sans-serif;
+    color: #2d2d2d;
+}
+
+html.theme-mentor .cs-related-card {
+    background: white;
+    box-shadow: 0 4px 24px rgba(156, 39, 176, 0.1);
+}
+
+html.theme-mentor .cs-related-card:hover {
+    box-shadow: 0 12px 40px rgba(156, 39, 176, 0.2);
+}
+
+html.theme-mentor .cs-related-project-label {
+    color: #9c27b0;
+}
+
+html.theme-mentor .cs-related-project-title {
+    font-family: 'Lexend', sans-serif;
+    color: #2d2d2d;
+}
+
+html.theme-mentor .cs-related-project-desc {
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: #555;
+}
+
+html.theme-mentor .cs-related-cta {
+    color: #9c27b0;
+}
+
+/* Undecided Theme */
+html.theme-undecided .cs-related {
+    background: #f4ede4;
+}
+
+html.theme-undecided .cs-related-label {
+    color: #1a1a1a;
+}
+
+html.theme-undecided .cs-related-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1a1a1a;
+}
+
+html.theme-undecided .cs-related-card {
+    background: white;
+    border: 1px solid #1a1a1a;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+html.theme-undecided .cs-related-card:hover {
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+html.theme-undecided .cs-related-image {
+    border-radius: 0;
+}
+
+html.theme-undecided .cs-related-project-label {
+    color: #666;
+}
+
+html.theme-undecided .cs-related-project-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1a1a1a;
+}
+
+html.theme-undecided .cs-related-project-desc {
+    font-family: Georgia, serif;
+    color: #333;
+}
+
+html.theme-undecided .cs-related-cta {
+    color: #1a1a1a;
+}
+
+/* Designer Theme */
+html.theme-designer .cs-related {
+    background: #fff5eb;
+}
+
+html.theme-designer .cs-related-label {
+    color: #ff6b00;
+}
+
+html.theme-designer .cs-related-title {
+    font-family: 'Poppins', sans-serif;
+    color: #2d2d2d;
+}
+
+html.theme-designer .cs-related-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(255, 107, 0, 0.1);
+}
+
+html.theme-designer .cs-related-card:hover {
+    box-shadow: 0 16px 48px rgba(255, 107, 0, 0.2);
+}
+
+html.theme-designer .cs-related-image {
+    border-radius: 16px;
+}
+
+html.theme-designer .cs-related-project-label {
+    color: #ff6b00;
+}
+
+html.theme-designer .cs-related-project-title {
+    font-family: 'Poppins', sans-serif;
+    color: #2d2d2d;
+}
+
+html.theme-designer .cs-related-project-desc {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+}
+
+html.theme-designer .cs-related-cta {
+    color: #ff6b00;
+}
+
+/* Business Theme */
+html.theme-business .cs-related {
+    background: #f0f4f8;
+}
+
+html.theme-business .cs-related-label {
+    color: #003366;
+}
+
+html.theme-business .cs-related-title {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+}
+
+html.theme-business .cs-related-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 51, 102, 0.08);
+}
+
+html.theme-business .cs-related-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 51, 102, 0.15);
+}
+
+html.theme-business .cs-related-image {
+    border-radius: 6px;
+}
+
+html.theme-business .cs-related-project-label {
+    color: #003366;
+}
+
+html.theme-business .cs-related-project-title {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+}
+
+html.theme-business .cs-related-project-desc {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+}
+
+html.theme-business .cs-related-cta {
+    color: #003366;
+}
+
+/* Classic Theme */
+html.theme-classic .cs-related {
+    background: #f5f5f5;
+}
+
+html.theme-classic .cs-related-label {
+    color: #666;
+}
+
+html.theme-classic .cs-related-title {
+    font-family: Georgia, serif;
+    color: #2d2d2d;
+}
+
+html.theme-classic .cs-related-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+html.theme-classic .cs-related-card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+html.theme-classic .cs-related-project-label {
+    color: #666;
+}
+
+html.theme-classic .cs-related-project-title {
+    font-family: Georgia, serif;
+    color: #2d2d2d;
+}
+
+html.theme-classic .cs-related-project-desc {
+    font-family: Georgia, serif;
+    color: #555;
+}
+
+html.theme-classic .cs-related-cta {
+    color: #2d2d2d;
+}
+
+/* Related Section - Responsive */
+@media (max-width: 768px) {
+    .cs-related {
+        padding: 60px 24px;
+    }
+
+    .cs-related-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .cs-related-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .cs-related-content {
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   TABLE OF CONTENTS - Jump Links for Case Studies
+   ===================================================== */
+
+.cs-toc {
+    padding: 32px 40px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.cs-toc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.cs-toc-toggle svg {
+    transition: transform 0.3s ease;
+}
+
+.cs-toc-toggle.active svg {
+    transform: rotate(180deg);
+}
+
+.cs-toc-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.cs-toc-content.open {
+    max-height: 500px;
+}
+
+.cs-toc-list {
+    list-style: none;
+    padding: 20px 24px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 32px;
+}
+
+.cs-toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cs-toc-number {
+    font-size: 11px;
+    font-weight: 700;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.cs-toc-link {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.cs-toc-link:hover {
+    text-decoration: underline;
+}
+
+/* Theme-specific TOC Styles */
+
+/* Mentor Theme */
+html.theme-mentor .cs-toc {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(156, 39, 176, 0.08);
+}
+
+html.theme-mentor .cs-toc-toggle {
+    background: #faf5fc;
+    color: #9c27b0;
+    border-radius: 12px;
+}
+
+html.theme-mentor .cs-toc-toggle:hover {
+    background: #f3e5f5;
+}
+
+html.theme-mentor .cs-toc-number {
+    background: rgba(156, 39, 176, 0.1);
+    color: #9c27b0;
+}
+
+html.theme-mentor .cs-toc-link {
+    color: #2d2d2d;
+    font-family: 'Lexend', sans-serif;
+}
+
+html.theme-mentor .cs-toc-link:hover {
+    color: #9c27b0;
+}
+
+/* Undecided Theme */
+html.theme-undecided .cs-toc {
+    background: white;
+    border: 1px solid #1a1a1a;
+}
+
+html.theme-undecided .cs-toc-toggle {
+    background: #f4ede4;
+    color: #1a1a1a;
+    border-radius: 0;
+}
+
+html.theme-undecided .cs-toc-toggle:hover {
+    background: #e8e0d6;
+}
+
+html.theme-undecided .cs-toc-number {
+    background: #1a1a1a;
+    color: white;
+}
+
+html.theme-undecided .cs-toc-link {
+    color: #1a1a1a;
+    font-family: Georgia, serif;
+}
+
+html.theme-undecided .cs-toc-link:hover {
+    color: #666;
+}
+
+/* Designer Theme */
+html.theme-designer .cs-toc {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(255, 107, 0, 0.08);
+}
+
+html.theme-designer .cs-toc-toggle {
+    background: #fff5eb;
+    color: #ff6b00;
+    border-radius: 16px;
+}
+
+html.theme-designer .cs-toc-toggle:hover {
+    background: #ffe8d4;
+}
+
+html.theme-designer .cs-toc-number {
+    background: rgba(255, 107, 0, 0.1);
+    color: #ff6b00;
+}
+
+html.theme-designer .cs-toc-link {
+    color: #2d2d2d;
+    font-family: 'Poppins', sans-serif;
+}
+
+html.theme-designer .cs-toc-link:hover {
+    color: #ff6b00;
+}
+
+/* Business Theme */
+html.theme-business .cs-toc {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 51, 102, 0.06);
+}
+
+html.theme-business .cs-toc-toggle {
+    background: #f0f4f8;
+    color: #003366;
+    border-radius: 6px;
+}
+
+html.theme-business .cs-toc-toggle:hover {
+    background: #e0e8f0;
+}
+
+html.theme-business .cs-toc-number {
+    background: rgba(0, 51, 102, 0.1);
+    color: #003366;
+}
+
+html.theme-business .cs-toc-link {
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+}
+
+html.theme-business .cs-toc-link:hover {
+    color: #003366;
+}
+
+/* Classic Theme */
+html.theme-classic .cs-toc {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+html.theme-classic .cs-toc-toggle {
+    background: #f5f5f5;
+    color: #2d2d2d;
+    border-radius: 6px;
+}
+
+html.theme-classic .cs-toc-toggle:hover {
+    background: #eee;
+}
+
+html.theme-classic .cs-toc-number {
+    background: rgba(45, 45, 45, 0.1);
+    color: #2d2d2d;
+}
+
+html.theme-classic .cs-toc-link {
+    color: #2d2d2d;
+    font-family: Georgia, serif;
+}
+
+html.theme-classic .cs-toc-link:hover {
+    color: #666;
+}
+
+/* TOC Responsive */
+@media (max-width: 768px) {
+    .cs-toc {
+        padding: 24px 20px;
+    }
+
+    .cs-toc-toggle {
+        padding: 14px 20px;
+        font-size: 13px;
+    }
+
+    .cs-toc-list {
+        grid-template-columns: 1fr;
+        padding: 16px 20px;
+        gap: 10px;
+    }
+
+    .cs-toc-link {
+        font-size: 13px;
+    }
 }
