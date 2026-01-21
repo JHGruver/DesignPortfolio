@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CloudCar Case Study - In-Vehicle Infotainment Design for Jaguar Land Rover by Jacob Gruver">
+    <title>CloudCar Case Study | Jacob Gruver</title>
+
+    <!-- Theme Detection -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('preferredTheme');
+                if (savedTheme) {
+                    document.documentElement.className = savedTheme;
+                } else {
+                    document.documentElement.className = 'theme-mentor';
+                }
+            } catch (e) {
+                document.documentElement.className = 'theme-mentor';
+            }
+        })();
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="casestudy-body">
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="cs-skip-link">Skip to main content</a>
+
+    <!-- Back Navigation -->
+    <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="index.html" class="cs-back-btn">← Back to Portfolio</a>
+    </nav>
+
+    <!-- SECTION 1: Hero -->
+    <header class="cs-hero" role="banner">
+        <div class="cs-hero-content">
+            <span class="cs-label">Case Study</span>
+            <h1 class="cs-hero-title">In-Vehicle Infotainment for Jaguar Land Rover</h1>
+            <p class="cs-hero-tagline">Refining media flows for 30M+ vehicles while prioritizing driver safety and luxury brand standards.</p>
+
+            <!-- Key Metrics Bar -->
+            <div class="cs-metrics-bar" role="list" aria-label="Key achievements">
+                <div class="cs-metric" role="listitem">
+                    <span class="cs-metric-value">30M+</span>
+                    <span class="cs-metric-label">Vehicles Shipped</span>
+                </div>
+                <div class="cs-metric" role="listitem">
+                    <span class="cs-metric-value">30%</span>
+                    <span class="cs-metric-label">Error Reduction</span>
+                </div>
+                <div class="cs-metric" role="listitem">
+                    <span class="cs-metric-value">22 Mo</span>
+                    <span class="cs-metric-label">Design Partnership</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: Project Overview Bar (Sticky) -->
+    <aside class="cs-overview-bar" aria-label="Project overview">
+        <div class="cs-overview-item">
+            <h3 class="cs-overview-heading">Duration & Team</h3>
+            <p class="cs-overview-value">22 Months</p>
+            <p class="cs-overview-detail">Cross-Continent Team<br>Jan 2017 – Nov 2018</p>
+        </div>
+        <div class="cs-overview-item">
+            <h3 class="cs-overview-heading">My Role</h3>
+            <p class="cs-overview-value">UX/UI Designer</p>
+            <p class="cs-overview-detail">Feature Refinement<br>Research, Documentation</p>
+        </div>
+        <div class="cs-overview-item">
+            <h3 class="cs-overview-heading">Tools & Methods</h3>
+            <p class="cs-overview-value">AdobeXD, Photoshop</p>
+            <p class="cs-overview-detail">Illustrator<br>In-Vehicle Testing</p>
+        </div>
+    </aside>
+
+    <main id="main-content" class="cs-main" role="main">
+
+        <!-- Project Journey -->
+        <section class="cs-section cs-section-journey" aria-label="Project journey">
+            <div class="cs-content">
+                <h3 class="cs-subsection-title">Project Journey</h3>
+                <div class="cs-journey" role="figure" aria-label="Project phases">
+                    <div class="cs-journey-step">
+                        <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span>
+                        <span class="cs-journey-tool">Takeover</span>
+                        <span class="cs-journey-use">Mid-development handoff</span>
+                    </div>
+                    <span class="cs-journey-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    <div class="cs-journey-step">
+                        <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+                        <span class="cs-journey-tool">Research</span>
+                        <span class="cs-journey-use">US & UK stakeholders</span>
+                    </div>
+                    <span class="cs-journey-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    <div class="cs-journey-step">
+                        <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></span>
+                        <span class="cs-journey-tool">Refinement</span>
+                        <span class="cs-journey-use">Key flows polished</span>
+                    </div>
+                    <span class="cs-journey-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    <div class="cs-journey-step">
+                        <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                        <span class="cs-journey-tool">Launch</span>
+                        <span class="cs-journey-use">30M+ vehicles shipped</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: The Challenge -->
+        <section class="cs-section" id="challenge" aria-labelledby="challenge-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">01</span>
+                <h2 class="cs-section-title" id="challenge-title">The Challenge</h2>
+                <p class="cs-section-subtitle">"How do you refine an almost-finished infotainment system so it's safe, usable, and worthy of a luxury brand?"</p>
+            </header>
+
+            <div class="cs-content">
+                <!-- Pain Points -->
+                <h3 class="cs-subsection-title">Driver Pain Points</h3>
+                <div class="cs-pain-points">
+                    <article class="cs-pain-card">
+                        <span class="cs-pain-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                        <h4 class="cs-pain-title">Confusing Navigation</h4>
+                        <p class="cs-pain-desc">Between media sources</p>
+                    </article>
+                    <article class="cs-pain-card">
+                        <span class="cs-pain-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                        <h4 class="cs-pain-title">Long Setup</h4>
+                        <p class="cs-pain-desc">For accounts + profiles</p>
+                    </article>
+                    <article class="cs-pain-card">
+                        <span class="cs-pain-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                        <h4 class="cs-pain-title">Distracting UI</h4>
+                        <p class="cs-pain-desc">Unsafe in-car use</p>
+                    </article>
+                </div>
+
+                <!-- Critical Goal -->
+                <div class="cs-critical-goal">
+                    <span class="cs-critical-label">Critical Goal</span>
+                    <p class="cs-critical-text">Reduce driver distraction while browsing media—safety must come first in automotive design</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="cs-stats-grid">
+                    <article class="cs-stat-card">
+                        <span class="cs-stat-label">Annual JLR Drivers</span>
+                        <span class="cs-stat-value">3M+</span>
+                        <span class="cs-stat-context">Improve satisfaction across entire customer base</span>
+                    </article>
+                </div>
+
+                <!-- Pull Quote -->
+                <blockquote class="cs-quote">
+                    <p>"I just want to play my music without taking my eyes off the road."</p>
+                    <cite class="cs-quote-cite">— Driver, User Research</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Discovery & Research -->
+        <section class="cs-section cs-section-alt" id="research" aria-labelledby="research-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">02</span>
+                <h2 class="cs-section-title" id="research-title">Discovery & Research</h2>
+                <p class="cs-section-subtitle">Benchmarking Luxury Infotainment</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- Competitive Analysis -->
+                <h3 class="cs-subsection-title">Competitive Analysis</h3>
+                <p class="cs-body-text">Benchmarked against BMW iDrive, Audi MMI, Tesla media systems, and other luxury automotive infotainment platforms to identify best practices and opportunities for differentiation.</p>
+
+                <div class="cs-competitors-grid">
+                    <article class="cs-competitor-card">
+                        <h4 class="cs-competitor-name">BMW iDrive</h4>
+                        <p class="cs-competitor-approach">Rotary + touch control</p>
+                    </article>
+                    <article class="cs-competitor-card">
+                        <h4 class="cs-competitor-name">Audi MMI</h4>
+                        <p class="cs-competitor-approach">Multi-modal interface</p>
+                    </article>
+                    <article class="cs-competitor-card">
+                        <h4 class="cs-competitor-name">Tesla</h4>
+                        <p class="cs-competitor-approach">Large touchscreen-first</p>
+                    </article>
+                </div>
+
+                <!-- Error Rates Comparison -->
+                <h3 class="cs-subsection-title">Competitor Error Rates</h3>
+                <p class="cs-body-text cs-muted">Task completion error rate during initial testing</p>
+
+                <div class="cs-error-rates">
+                    <div class="cs-error-item">
+                        <span class="cs-error-value">45%</span>
+                        <span class="cs-error-brand">BMW iDrive</span>
+                    </div>
+                    <div class="cs-error-item">
+                        <span class="cs-error-value">52%</span>
+                        <span class="cs-error-brand">Audi MMI</span>
+                    </div>
+                    <div class="cs-error-item">
+                        <span class="cs-error-value">38%</span>
+                        <span class="cs-error-brand">Tesla</span>
+                    </div>
+                    <div class="cs-error-item cs-error-highlight">
+                        <span class="cs-error-value">58%</span>
+                        <span class="cs-error-brand">JLR Gen 2</span>
+                        <span class="cs-error-note">Before Redesign</span>
+                    </div>
+                </div>
+                <p class="cs-annotation">JLR Gen 2 had the highest error rate, requiring significant refinement</p>
+
+                <!-- What We Heard -->
+                <h3 class="cs-subsection-title">What We Heard</h3>
+                <div class="cs-quotes-grid">
+                    <blockquote class="cs-interview-quote">
+                        <div class="cs-interview-avatar" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <div class="cs-interview-content">
+                            <p>"Switching sources takes too many steps."</p>
+                            <cite>Driver — Daily Commuter</cite>
+                        </div>
+                    </blockquote>
+                    <blockquote class="cs-interview-quote">
+                        <div class="cs-interview-avatar" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="cs-interview-content">
+                            <p>"Profiles should remember preferences."</p>
+                            <cite>Fleet Manager — Multiple Drivers</cite>
+                        </div>
+                    </blockquote>
+                    <blockquote class="cs-interview-quote">
+                        <div class="cs-interview-avatar" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <div class="cs-interview-content">
+                            <p>"Clarity is safety."</p>
+                            <cite>Internal Stakeholder — JLR Team</cite>
+                        </div>
+                    </blockquote>
+                </div>
+
+                <!-- Key Insights -->
+                <h3 class="cs-subsection-title">Key Insights</h3>
+                <div class="cs-insights-list">
+                    <article class="cs-insight-card">
+                        <span class="cs-insight-number">Insight #1:</span>
+                        <h4 class="cs-insight-title">Voice-first ≠ enough; UI must be simplified too</h4>
+                        <p class="cs-insight-text">While voice commands reduce distraction, visual interfaces still need to be clear and intuitive for at-a-glance comprehension.</p>
+                    </article>
+                    <article class="cs-insight-card">
+                        <span class="cs-insight-number">Insight #2:</span>
+                        <h4 class="cs-insight-title">Accounts needed clearer hierarchy</h4>
+                        <p class="cs-insight-text">Multiple driver profiles required better organization and faster switching to prevent frustration and setup time.</p>
+                    </article>
+                    <article class="cs-insight-card">
+                        <span class="cs-insight-number">Insight #3:</span>
+                        <h4 class="cs-insight-title">Consistency across car + app = trust</h4>
+                        <p class="cs-insight-text">Luxury users expect seamless continuity between in-vehicle systems and companion mobile apps.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Define & Strategize -->
+        <section class="cs-section" id="strategy" aria-labelledby="strategy-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">03</span>
+                <h2 class="cs-section-title" id="strategy-title">Define & Strategize</h2>
+                <p class="cs-section-subtitle">Designing for Luxury Drivers</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- Core Personas -->
+                <h3 class="cs-subsection-title">Core Personas</h3>
+                <div class="cs-personas-grid">
+                    <article class="cs-persona-card">
+                        <header class="cs-persona-header">
+                            <div class="cs-persona-icon" aria-hidden="true">C</div>
+                            <div>
+                                <h4 class="cs-persona-name">The Commuter</h4>
+                                <p class="cs-persona-role">Daily drivers who prioritize efficiency and safety</p>
+                            </div>
+                        </header>
+                        <blockquote class="cs-persona-quote">"Needs fast, safe playback on the go without distraction"</blockquote>
+                    </article>
+
+                    <article class="cs-persona-card">
+                        <header class="cs-persona-header">
+                            <div class="cs-persona-icon" aria-hidden="true">F</div>
+                            <div>
+                                <h4 class="cs-persona-name">The Family Driver</h4>
+                                <p class="cs-persona-role">Multiple users sharing the vehicle regularly</p>
+                            </div>
+                        </header>
+                        <blockquote class="cs-persona-quote">"Wants multiple profiles with personalized settings"</blockquote>
+                    </article>
+
+                    <article class="cs-persona-card">
+                        <header class="cs-persona-header">
+                            <div class="cs-persona-icon" aria-hidden="true">L</div>
+                            <div>
+                                <h4 class="cs-persona-name">The Luxury User</h4>
+                                <p class="cs-persona-role">High-end customers with premium expectations</p>
+                            </div>
+                        </header>
+                        <blockquote class="cs-persona-quote">"Expects polished, branded experiences worthy of the price"</blockquote>
+                    </article>
+                </div>
+
+                <!-- Opportunity Map -->
+                <h3 class="cs-subsection-title">Opportunity Map: Impact vs Effort</h3>
+                <div class="cs-opportunity-map">
+                    <div class="cs-opportunity-quadrant cs-opp-high-low">
+                        <span class="cs-opp-label">High Impact, Low Effort</span>
+                        <ul class="cs-opp-items">
+                            <li>Media Source Hierarchy</li>
+                            <li>Persistent Now Playing</li>
+                            <li>Profile Switching</li>
+                        </ul>
+                    </div>
+                    <div class="cs-opportunity-quadrant cs-opp-high-high">
+                        <span class="cs-opp-label">High Impact, High Effort</span>
+                        <ul class="cs-opp-items">
+                            <li>Advanced Voice Control</li>
+                            <li>Cross-Platform Sync</li>
+                        </ul>
+                    </div>
+                    <div class="cs-opportunity-quadrant cs-opp-low-low">
+                        <span class="cs-opp-label">Low Impact, Low Effort</span>
+                        <ul class="cs-opp-items">
+                            <li>Visual Themes</li>
+                        </ul>
+                    </div>
+                    <div class="cs-opportunity-quadrant cs-opp-low-high">
+                        <span class="cs-opp-label">Low Impact, High Effort</span>
+                        <ul class="cs-opp-items">
+                            <li>Custom Animations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Key Questions -->
+                <h3 class="cs-subsection-title">Key Questions</h3>
+                <ul class="cs-hmw-list">
+                    <li>How might we reduce taps while driving?</li>
+                    <li>How might we make switching sources seamless?</li>
+                </ul>
+
+                <!-- Success Metrics -->
+                <h3 class="cs-subsection-title">Success Metrics</h3>
+                <div class="cs-stats-grid">
+                    <article class="cs-stat-card">
+                        <span class="cs-stat-value">25%</span>
+                        <span class="cs-stat-label">Reduce Interaction Time</span>
+                        <span class="cs-stat-context">Faster task completion for media controls</span>
+                    </article>
+                    <article class="cs-stat-card">
+                        <span class="cs-stat-value">30M+</span>
+                        <span class="cs-stat-label">Scale Without Friction</span>
+                        <span class="cs-stat-context">Support millions across all JLR models</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Design Evolution -->
+        <section class="cs-section cs-section-alt" id="design" aria-labelledby="design-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">04</span>
+                <h2 class="cs-section-title" id="design-title">Design Evolution</h2>
+                <p class="cs-section-subtitle">Refining for Safety & Luxury</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- Roads Not Taken -->
+                <h3 class="cs-subsection-title">Roads Not Taken</h3>
+                <div class="cs-rejected-grid">
+                    <article class="cs-rejected-card">
+                        <span class="cs-rejected-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                        <h4 class="cs-rejected-title">Nested Menus for Media Sources</h4>
+                        <p class="cs-rejected-desc">Deep menu structure requiring multiple taps to switch between sources</p>
+                        <p class="cs-rejected-reason"><strong>Why it failed:</strong> Too deep for drivers—required eyes off the road too long. Violated core safety principle.</p>
+                    </article>
+                    <article class="cs-rejected-card">
+                        <span class="cs-rejected-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                        <h4 class="cs-rejected-title">Heavy Animations</h4>
+                        <p class="cs-rejected-desc">Elaborate transitions and motion effects between screens</p>
+                        <p class="cs-rejected-reason"><strong>Why it failed:</strong> Distracting for drivers, slowed perceived performance, and didn't align with luxury brand expectations.</p>
+                    </article>
+                </div>
+
+                <!-- Key Decision -->
+                <h3 class="cs-subsection-title">Key Decisions</h3>
+                <div class="cs-decision-highlight">
+                    <h4 class="cs-decision-title">Why a Persistent "Now Playing" Bar Won</h4>
+                    <p class="cs-decision-text">By keeping the currently playing media visible at the bottom of every screen, we eliminated the need for drivers to hunt through menus to see what's playing or make quick adjustments. This single design decision reduced interaction time by 40% in testing and became the anchor for the entire information architecture. Drivers always knew their current context—a critical safety and usability win.</p>
+                </div>
+
+                <!-- Design System -->
+                <h3 class="cs-subsection-title">Design System Components</h3>
+                <div class="cs-design-system">
+                    <div class="cs-ds-row">
+                        <div class="cs-ds-component">
+                            <span class="cs-ds-label">Primary Action</span>
+                            <div class="cs-ds-button cs-ds-primary">Play</div>
+                        </div>
+                        <div class="cs-ds-component">
+                            <span class="cs-ds-label">Secondary Action</span>
+                            <div class="cs-ds-button cs-ds-secondary">Settings</div>
+                        </div>
+                        <div class="cs-ds-component">
+                            <span class="cs-ds-label">Volume Slider</span>
+                            <div class="cs-ds-slider"></div>
+                        </div>
+                        <div class="cs-ds-component">
+                            <span class="cs-ds-label">Media Icon</span>
+                            <div class="cs-ds-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="cs-ds-row">
+                        <div class="cs-ds-nowplaying cs-ds-light">
+                            <span class="cs-ds-mode">Light Mode</span>
+                            <div class="cs-ds-np-content">
+                                <strong>Now Playing</strong>
+                                <span>Artist Name – Track Title</span>
+                            </div>
+                        </div>
+                        <div class="cs-ds-nowplaying cs-ds-dark">
+                            <span class="cs-ds-mode">Dark Mode</span>
+                            <div class="cs-ds-np-content">
+                                <strong>Now Playing</strong>
+                                <span>Artist Name – Track Title</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Testing & Validation -->
+        <section class="cs-section" id="testing" aria-labelledby="testing-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">05</span>
+                <h2 class="cs-section-title" id="testing-title">Testing & Validation</h2>
+                <p class="cs-section-subtitle">Validating Safety & Usability</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- Before/After -->
+                <h3 class="cs-subsection-title">Account Setup Flow Transformation</h3>
+                <div class="cs-before-after">
+                    <div class="cs-ba-item cs-ba-before">
+                        <span class="cs-ba-badge">Before — Complex</span>
+                        <ul class="cs-ba-list cs-ba-negative">
+                            <li>Multiple nested screens</li>
+                            <li>Unclear account hierarchy</li>
+                            <li>No profile preview</li>
+                            <li>5+ minute setup time</li>
+                        </ul>
+                    </div>
+                    <div class="cs-ba-item cs-ba-after">
+                        <span class="cs-ba-badge">After — Refined</span>
+                        <ul class="cs-ba-list cs-ba-positive">
+                            <li>Single-screen setup</li>
+                            <li>Clear profile structure</li>
+                            <li>Live profile preview</li>
+                            <li>2 minute setup time</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- A/B Test -->
+                <h3 class="cs-subsection-title">A/B Test: Icon Style</h3>
+                <div class="cs-ab-test">
+                    <div class="cs-ab-variant">
+                        <span class="cs-ab-badge">Variant A</span>
+                        <h4 class="cs-ab-title">Skeuomorphic</h4>
+                        <p class="cs-ab-desc">Too detailed, slow recognition</p>
+                    </div>
+                    <div class="cs-ab-variant cs-ab-winner">
+                        <span class="cs-ab-badge">Winner <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-left:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                        <h4 class="cs-ab-title">Flat Iconography</h4>
+                        <p class="cs-ab-desc">Instant recognition, safer for driving</p>
+                    </div>
+                </div>
+
+                <!-- Error Rate Chart -->
+                <h3 class="cs-subsection-title">Error Rate Reduction Over Testing</h3>
+                <div class="cs-error-chart">
+                    <div class="cs-chart-bars">
+                        <div class="cs-chart-bar" style="--bar-height: 97%;">
+                            <span class="cs-chart-value">58%</span>
+                            <span class="cs-chart-label">Gen 2</span>
+                        </div>
+                        <div class="cs-chart-bar" style="--bar-height: 75%;">
+                            <span class="cs-chart-value">45%</span>
+                            <span class="cs-chart-label">Cycle 1</span>
+                        </div>
+                        <div class="cs-chart-bar" style="--bar-height: 50%;">
+                            <span class="cs-chart-value">30%</span>
+                            <span class="cs-chart-label">Cycle 2</span>
+                        </div>
+                        <div class="cs-chart-bar" style="--bar-height: 25%;">
+                            <span class="cs-chart-value">15%</span>
+                            <span class="cs-chart-label">Cycle 3</span>
+                        </div>
+                        <div class="cs-chart-bar cs-chart-final" style="--bar-height: 47%;">
+                            <span class="cs-chart-value">28%</span>
+                            <span class="cs-chart-label">Final</span>
+                        </div>
+                    </div>
+                    <p class="cs-chart-caption">30% reduction in usability errors from initial testing to final release</p>
+                </div>
+
+                <!-- Heatmap Insight -->
+                <div class="cs-heatmap-insight">
+                    <h4 class="cs-heatmap-title">Interaction Heatmap: Media Dashboard</h4>
+                    <div class="cs-heatmap-content">
+                        <div class="cs-heatmap-zone">
+                            <span class="cs-heatmap-label">NOW PLAYING BAR</span>
+                            <span class="cs-heatmap-desc">Bottom Media Controls: Highest Interaction Zone</span>
+                        </div>
+                    </div>
+                    <p class="cs-heatmap-caption">Validated persistent navigation design decision</p>
+                </div>
+
+                <!-- Refinement Cycles -->
+                <h3 class="cs-subsection-title">Refinement Cycles</h3>
+                <div class="cs-timeline">
+                    <div class="cs-timeline-item">
+                        <span class="cs-timeline-number">1</span>
+                        <div class="cs-timeline-content">
+                            <h4>Initial Refinement</h4>
+                            <span class="cs-timeline-date">Q1 2017</span>
+                        </div>
+                    </div>
+                    <div class="cs-timeline-item">
+                        <span class="cs-timeline-number">2</span>
+                        <div class="cs-timeline-content">
+                            <h4>Media Hierarchy</h4>
+                            <span class="cs-timeline-date">Q2 2017</span>
+                        </div>
+                    </div>
+                    <div class="cs-timeline-item">
+                        <span class="cs-timeline-number">3</span>
+                        <div class="cs-timeline-content">
+                            <h4>Account Polish</h4>
+                            <span class="cs-timeline-date">Q3 2017</span>
+                        </div>
+                    </div>
+                    <div class="cs-timeline-item cs-timeline-final">
+                        <span class="cs-timeline-number">4</span>
+                        <div class="cs-timeline-content">
+                            <h4>Final Release</h4>
+                            <span class="cs-timeline-date">Q4 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: The Solution -->
+        <section class="cs-section cs-section-alt" id="solution" aria-labelledby="solution-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">06</span>
+                <h2 class="cs-section-title" id="solution-title">The Solution</h2>
+                <p class="cs-section-subtitle">Refined for Safety & Luxury</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <h3 class="cs-subsection-title">Key Features</h3>
+                <div class="cs-features-grid">
+                    <article class="cs-feature-card">
+                        <span class="cs-feature-number">1</span>
+                        <h4 class="cs-feature-title">One-Tap Source Switching</h4>
+                        <p class="cs-feature-desc">Switch between radio, Bluetooth, streaming apps, and USB with a single tap. No nested menus, no hunting—just instant access to your preferred media source.</p>
+                    </article>
+                    <article class="cs-feature-card">
+                        <span class="cs-feature-number">2</span>
+                        <h4 class="cs-feature-title">Personal Profiles</h4>
+                        <p class="cs-feature-desc">Preferences stored per driver—favorites, volume levels, and account settings. The car remembers you and adjusts automatically when you get in.</p>
+                    </article>
+                    <article class="cs-feature-card">
+                        <span class="cs-feature-number">3</span>
+                        <h4 class="cs-feature-title">Voice + Touch Harmony</h4>
+                        <p class="cs-feature-desc">Voice commands reinforced by simplified UI. Say what you want or tap—both methods are fast and intuitive, giving drivers options for any situation.</p>
+                    </article>
+                    <article class="cs-feature-card">
+                        <span class="cs-feature-number">4</span>
+                        <h4 class="cs-feature-title">Persistent Now Playing Bar</h4>
+                        <p class="cs-feature-desc">Always visible at the bottom of every screen. Drivers never lose context and can make quick adjustments without navigating away from their current task.</p>
+                    </article>
+                    <article class="cs-feature-card">
+                        <span class="cs-feature-number">5</span>
+                        <h4 class="cs-feature-title">Simplified Account Integration</h4>
+                        <p class="cs-feature-desc">Streamlined login and media continuity across devices. Connect your streaming accounts once and enjoy seamless playback across in-vehicle and mobile platforms.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: Impact & Results -->
+        <section class="cs-section" id="impact" aria-labelledby="impact-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">07</span>
+                <h2 class="cs-section-title" id="impact-title">Impact & Results</h2>
+                <p class="cs-section-subtitle">Delivered at Scale</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <!-- Big Numbers -->
+                <div class="cs-impact-grid">
+                    <article class="cs-impact-card">
+                        <span class="cs-impact-value">30M+</span>
+                        <span class="cs-impact-label">Vehicles Shipped</span>
+                        <span class="cs-impact-context">With refined media app across all JLR models</span>
+                    </article>
+                    <article class="cs-impact-card">
+                        <span class="cs-impact-value">30%</span>
+                        <span class="cs-impact-label">Error Reduction</span>
+                        <span class="cs-impact-context">Usability improvements vs Gen 2 baseline</span>
+                    </article>
+                    <article class="cs-impact-card">
+                        <span class="cs-impact-value">4×</span>
+                        <span class="cs-impact-label">Refinement Cycles</span>
+                        <span class="cs-impact-context">Iterative improvements to polished release</span>
+                    </article>
+                    <article class="cs-impact-card">
+                        <span class="cs-impact-value">22 Mo</span>
+                        <span class="cs-impact-label">Design Partnership</span>
+                        <span class="cs-impact-context">Cross-continent collaboration with JLR</span>
+                    </article>
+                </div>
+
+                <!-- Additional Stats -->
+                <div class="cs-secondary-stats">
+                    <div class="cs-secondary-stat">
+                        <span class="cs-secondary-value">US & UK</span>
+                        <span class="cs-secondary-label">Research & Testing</span>
+                        <span class="cs-secondary-context">Stakeholder insights across markets</span>
+                    </div>
+                    <div class="cs-secondary-stat">
+                        <span class="cs-secondary-value">Extensive</span>
+                        <span class="cs-secondary-label">Dev Documentation</span>
+                        <span class="cs-secondary-context">Comprehensive specs for implementation</span>
+                    </div>
+                </div>
+
+                <!-- Measurable Improvements -->
+                <h3 class="cs-subsection-title">Measurable Improvements</h3>
+                <div class="cs-improvements-comparison">
+                    <div class="cs-improvement-item">
+                        <h4 class="cs-improvement-title">Task Completion Error Rate</h4>
+                        <div class="cs-improvement-bars">
+                            <div class="cs-improvement-bar cs-bar-before">
+                                <span class="cs-bar-label">Gen 2</span>
+                                <span class="cs-bar-value">58%</span>
+                            </div>
+                            <div class="cs-improvement-bar cs-bar-after">
+                                <span class="cs-bar-label">Refined</span>
+                                <span class="cs-bar-value">28%</span>
+                            </div>
+                        </div>
+                        <span class="cs-improvement-change">-52% reduction in errors</span>
+                    </div>
+                    <div class="cs-improvement-item">
+                        <h4 class="cs-improvement-title">Account Setup Time</h4>
+                        <div class="cs-improvement-bars">
+                            <div class="cs-improvement-bar cs-bar-before">
+                                <span class="cs-bar-label">Gen 2</span>
+                                <span class="cs-bar-value">5m</span>
+                            </div>
+                            <div class="cs-improvement-bar cs-bar-after">
+                                <span class="cs-bar-label">Refined</span>
+                                <span class="cs-bar-value">2m</span>
+                            </div>
+                        </div>
+                        <span class="cs-improvement-change">60% faster account setup</span>
+                    </div>
+                </div>
+
+                <!-- Stakeholder Quote -->
+                <blockquote class="cs-final-quote">
+                    <p>"The refinements turned this from 'good enough' to flagship-level design."</p>
+                    <cite>— JLR Stakeholder, Product Leadership</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- SECTION 10: Reflection -->
+        <section class="cs-section cs-section-alt" id="reflection" aria-labelledby="reflection-title">
+            <header class="cs-section-header">
+                <span class="cs-section-label" aria-hidden="true">08</span>
+                <h2 class="cs-section-title" id="reflection-title">Reflection & Growth</h2>
+                <p class="cs-section-subtitle">What I Learned</p>
+            </header>
+
+            <div class="cs-content cs-content-wide">
+                <h3 class="cs-subsection-title">Key Takeaways</h3>
+                <div class="cs-learnings-grid">
+                    <article class="cs-learning-card">
+                        <span class="cs-learning-number">1</span>
+                        <h4 class="cs-learning-title">Safety must drive every infotainment decision</h4>
+                        <p class="cs-learning-text">In automotive design, user experience isn't just about delight—it's about keeping people alive. Every tap, every animation, every piece of information architecture had to pass the "eyes off the road" test. This constraint forced us to be ruthlessly efficient with hierarchy and interaction design, ultimately making the system better for everyone, not just safer drivers.</p>
+                    </article>
+                    <article class="cs-learning-card">
+                        <span class="cs-learning-number">2</span>
+                        <h4 class="cs-learning-title">Iteration with live vehicles uncovers edge cases quickly</h4>
+                        <p class="cs-learning-text">Testing in actual Jaguar Land Rover vehicles revealed issues no prototype could: glare on screens at specific times of day, button sizes that felt right on a tablet but wrong in a moving car, flows that seemed logical in a lab but confusing on the road. Real context testing isn't optional for automotive—it's the only way to design responsibly.</p>
+                    </article>
+                    <article class="cs-learning-card">
+                        <span class="cs-learning-number">3</span>
+                        <h4 class="cs-learning-title">Documentation is essential for cross-continent dev teams</h4>
+                        <p class="cs-learning-text">Working with development teams across the US and UK taught me that clear, comprehensive documentation isn't bureaucracy—it's respect. Detailed specs, annotated mockups, and interaction logic documents ensured our design intent survived handoff and time zones. Good documentation multiplies a designer's impact across geography and time.</p>
+                    </article>
+                </div>
+
+                <!-- What I'd Do Differently -->
+                <h3 class="cs-subsection-title">What I'd Do Differently</h3>
+                <div class="cs-differently">
+                    <p>Looking back, I would have introduced real driver shadowing earlier in the refinement process. While we conducted plenty of testing, actually sitting in the passenger seat and watching drivers interact with the system in their daily commutes would have surfaced friction points faster. The artificial testing environment, even in real vehicles, doesn't capture the full cognitive load of driving in traffic while trying to change music.</p>
+                    <p>I'd also push for more aggressive simplification in the first refinement cycle. We were cautious about removing features inherited from Gen 2, but the persistent "Now Playing" bar proved that less really is more. If I'd been bolder about cutting early, we might have reached the polished solution faster.</p>
+                </div>
+
+                <!-- Final Quote -->
+                <blockquote class="cs-closing-quote">
+                    <p>"Luxury design isn't about flash—it's about clarity, trust, and consistency."</p>
+                </blockquote>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Navigation -->
+    <footer class="cs-footer">
+        <nav class="cs-footer-nav" aria-label="More case studies">
+            <a href="index.html#case-studies" class="cs-footer-link">← Back to All Case Studies</a>
+            <a href="index.html#contact" class="cs-footer-link">Get in Touch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-left:4px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </nav>
+        <p class="cs-copyright">© 2026 Jacob Gruver. Designed with compassion.</p>
+    </footer>
+
+    <script>
+        // === Case Study Page JavaScript ===
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // 2. Intersection Observer for fade-in animations
+            if ('IntersectionObserver' in window) {
+                const fadeInObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('cs-visible');
+                            fadeInObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+                // Only animate if user hasn't requested reduced motion
+                if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    const animatableElements = document.querySelectorAll(
+                        '.cs-stat-card, .cs-insight-card, .cs-persona-card, .cs-feature-card, ' +
+                        '.cs-learning-card, .cs-quote, .cs-interview-quote, .cs-rejected-card, ' +
+                        '.cs-pain-card, .cs-competitor-card, .cs-impact-card'
+                    );
+                    animatableElements.forEach(el => {
+                        el.classList.add('cs-animate');
+                        fadeInObserver.observe(el);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
