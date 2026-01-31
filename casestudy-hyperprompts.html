@@ -87,43 +87,26 @@
                     <span class="cs-metric-label">To Launch</span>
                 </div>
             </div>
+
+            <!-- Project Metadata -->
+            <div class="cs-hero-meta" role="list" aria-label="Project details">
+                <div class="cs-hero-meta-item" role="listitem">
+                    <span class="cs-hero-meta-label">Duration</span>
+                    <span class="cs-hero-meta-value">7 Months <span class="cs-hero-meta-date">Jul 2023 – Feb 2024</span></span>
+                </div>
+                <div class="cs-hero-meta-divider" aria-hidden="true"></div>
+                <div class="cs-hero-meta-item" role="listitem">
+                    <span class="cs-hero-meta-label">Role</span>
+                    <span class="cs-hero-meta-value">Sole Designer — End-to-End UX/UI</span>
+                </div>
+                <div class="cs-hero-meta-divider" aria-hidden="true"></div>
+                <div class="cs-hero-meta-item" role="listitem">
+                    <span class="cs-hero-meta-label">Tools</span>
+                    <span class="cs-hero-meta-value">Figma, Notion, Miro</span>
+                </div>
+            </div>
         </div>
     </header>
-
-    <!-- SECTION 2: Project Overview Bar (Sticky) -->
-    <aside class="cs-overview-bar" aria-label="Project overview">
-        <div class="cs-overview-content">
-            <div class="cs-overview-item">
-                <span class="cs-overview-icon" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                </span>
-                <div class="cs-overview-text">
-                    <span class="cs-overview-label">Duration</span>
-                    <span class="cs-overview-value">7 Months <span class="cs-overview-date">Jul 2023 – Feb 2024</span></span>
-                </div>
-            </div>
-            <div class="cs-overview-divider" aria-hidden="true"></div>
-            <div class="cs-overview-item">
-                <span class="cs-overview-icon" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </span>
-                <div class="cs-overview-text">
-                    <span class="cs-overview-label">Role</span>
-                    <span class="cs-overview-value">Sole Designer — End-to-End UX/UI</span>
-                </div>
-            </div>
-            <div class="cs-overview-divider" aria-hidden="true"></div>
-            <div class="cs-overview-item">
-                <span class="cs-overview-icon" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-                </span>
-                <div class="cs-overview-text">
-                    <span class="cs-overview-label">Tools</span>
-                    <span class="cs-overview-value">Figma, Notion, Miro</span>
-                </div>
-            </div>
-        </div>
-    </aside>
 
     <main id="main-content" class="cs-main" role="main">
 
@@ -1104,8 +1087,7 @@
                     sections.push({ dot, section });
                     dot.addEventListener('click', () => {
                         const navHeight = document.querySelector('.cs-nav')?.offsetHeight || 52;
-                        const overviewHeight = document.querySelector('.cs-overview-bar')?.offsetHeight || 80;
-                        const offset = navHeight + overviewHeight + 20;
+                        const offset = navHeight + 20;
                         window.scrollTo({
                             top: section.offsetTop - offset,
                             behavior: 'smooth'
@@ -1139,8 +1121,7 @@
                     if (target) {
                         e.preventDefault();
                         const navHeight = document.querySelector('.cs-nav')?.offsetHeight || 52;
-                        const overviewHeight = document.querySelector('.cs-overview-bar')?.offsetHeight || 80;
-                        const offset = navHeight + overviewHeight + 20;
+                        const offset = navHeight + 20;
 
                         window.scrollTo({
                             top: target.offsetTop - offset,

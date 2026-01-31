@@ -30766,3 +30766,242 @@ html.theme-classic .cs-toc-link:hover {
         font-size: 13px;
     }
 }
+
+/* =====================================================
+   HERO METADATA - Project Details in Hero Section
+   ===================================================== */
+
+/* Base Hero Meta Styles */
+.cs-hero-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cs-hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.cs-hero-meta-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.cs-hero-meta-value {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cs-hero-meta-date {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.cs-hero-meta-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* =====================================================
+   HERO METADATA - Theme-Specific Styles
+   ===================================================== */
+
+/* Mentor Theme (Purple) */
+html.theme-mentor .cs-hero-meta {
+    border-top-color: rgba(255, 255, 255, 0.25);
+}
+
+html.theme-mentor .cs-hero-meta-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Lexend', sans-serif;
+}
+
+html.theme-mentor .cs-hero-meta-value {
+    color: white;
+    font-family: 'Lexend', sans-serif;
+}
+
+html.theme-mentor .cs-hero-meta-date {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+html.theme-mentor .cs-hero-meta-divider {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Undecided Theme (Newspaper) */
+html.theme-undecided .cs-hero-meta {
+    border-top: 1px solid #1a1a1a;
+    gap: 32px;
+}
+
+html.theme-undecided .cs-hero-meta-label {
+    color: #5a5a5a;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+}
+
+html.theme-undecided .cs-hero-meta-value {
+    color: #1a1a1a;
+    font-family: Georgia, serif;
+}
+
+html.theme-undecided .cs-hero-meta-date {
+    color: #5a5a5a;
+}
+
+html.theme-undecided .cs-hero-meta-divider {
+    background: #1a1a1a;
+    height: 32px;
+}
+
+/* Designer Theme (Orange) */
+html.theme-designer .cs-hero-meta {
+    border-top: 2px solid rgba(255, 107, 53, 0.2);
+    padding-top: 28px;
+}
+
+html.theme-designer .cs-hero-meta-label {
+    color: #ff6b35;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+}
+
+html.theme-designer .cs-hero-meta-value {
+    color: #2c2c2c;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+html.theme-designer .cs-hero-meta-date {
+    color: #5a5a5a;
+}
+
+html.theme-designer .cs-hero-meta-divider {
+    background: rgba(255, 107, 53, 0.3);
+    height: 32px;
+}
+
+/* Business Theme (Blue) */
+html.theme-business .cs-hero-meta {
+    border-top: 1px solid rgba(21, 101, 192, 0.25);
+    gap: 28px;
+}
+
+html.theme-business .cs-hero-meta-label {
+    color: #1565c0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+html.theme-business .cs-hero-meta-value {
+    color: #263238;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
+html.theme-business .cs-hero-meta-date {
+    color: #607d8b;
+}
+
+html.theme-business .cs-hero-meta-divider {
+    background: rgba(21, 101, 192, 0.2);
+    height: 32px;
+}
+
+/* Classic Theme */
+html.theme-classic .cs-hero-meta {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+html.theme-classic .cs-hero-meta-label {
+    color: #666;
+    font-family: Georgia, serif;
+    font-size: 10px;
+}
+
+html.theme-classic .cs-hero-meta-value {
+    color: #2d2d2d;
+    font-family: Georgia, serif;
+}
+
+html.theme-classic .cs-hero-meta-date {
+    color: #888;
+}
+
+html.theme-classic .cs-hero-meta-divider {
+    background: rgba(0, 0, 0, 0.15);
+    height: 32px;
+}
+
+/* =====================================================
+   HERO METADATA - Responsive Styles
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .cs-hero-meta {
+        gap: 20px;
+    }
+
+    .cs-hero-meta-item {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cs-hero-meta {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 24px;
+    }
+
+    .cs-hero-meta-divider {
+        display: none;
+    }
+
+    .cs-hero-meta-item {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    }
+
+    .cs-hero-meta-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* =====================================================
+   HERO METADATA - Theme Responsive Overrides
+   ===================================================== */
+
+@media (max-width: 768px) {
+    html.theme-undecided .cs-hero-meta-item {
+        border-bottom-color: rgba(26, 26, 26, 0.15);
+    }
+
+    html.theme-mentor .cs-hero-meta-item {
+        border-bottom-color: rgba(255, 255, 255, 0.15);
+    }
+
+    html.theme-designer .cs-hero-meta-item {
+        border-bottom-color: rgba(255, 107, 53, 0.15);
+    }
+
+    html.theme-business .cs-hero-meta-item {
+        border-bottom-color: rgba(21, 101, 192, 0.15);
+    }
+}
