@@ -31005,3 +31005,531 @@ html.theme-classic .cs-hero-meta-divider {
         border-bottom-color: rgba(21, 101, 192, 0.15);
     }
 }
+
+/* =====================================================
+   MOBILE RESPONSIVENESS - Phase 1 Critical Fixes
+   ===================================================== */
+
+/* =====================================================
+   1. PROJECT CAROUSEL - Responsive Sizing
+   ===================================================== */
+
+/* Tablet breakpoint (900px) */
+@media (max-width: 900px) {
+    .project-carousel {
+        padding: 3rem 1rem;
+    }
+
+    .carousel-perspective {
+        min-height: 480px;
+    }
+
+    .carousel-stack {
+        width: 600px;
+        height: 400px;
+    }
+
+    .nav-orb {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nav-orb svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .progress-track {
+        width: 250px;
+    }
+
+    .carousel-progress {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+/* Mobile breakpoint (768px) */
+@media (max-width: 768px) {
+    .project-carousel {
+        padding: 2rem 1rem;
+    }
+
+    .carousel-perspective {
+        min-height: 380px;
+        padding: 0 1rem;
+    }
+
+    .carousel-stack {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .carousel-controls {
+        padding: 0 0.5rem;
+    }
+
+    .nav-orb {
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-orb svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .progress-track {
+        width: 180px;
+    }
+
+    .carousel-progress {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .progress-label {
+        font-size: 12px;
+    }
+}
+
+/* Small mobile (480px) */
+@media (max-width: 480px) {
+    .carousel-perspective {
+        min-height: 320px;
+    }
+
+    .carousel-stack {
+        max-width: 320px;
+        height: 250px;
+    }
+
+    .nav-orb {
+        width: 40px;
+        height: 40px;
+    }
+
+    .progress-track {
+        width: 140px;
+    }
+}
+
+/* =====================================================
+   2. CASE STUDY HERO - 900px Tablet Breakpoint
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .cs-hero {
+        padding: 100px 24px 60px;
+    }
+
+    .cs-hero-title {
+        font-size: 38px !important;
+    }
+
+    .cs-hero-tagline {
+        font-size: 17px !important;
+    }
+
+    .cs-metrics-bar {
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cs-metric {
+        min-width: 140px;
+    }
+
+    .cs-content {
+        padding: 48px 24px;
+    }
+
+    .cs-content-wide {
+        padding: 48px 24px;
+    }
+}
+
+/* =====================================================
+   3. OPPORTUNITY MAP - Mobile Collapse
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .cs-opportunity-map {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cs-opportunity-map {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cs-opportunity-quadrant {
+        padding: 20px !important;
+    }
+}
+
+/* =====================================================
+   4. TIMELINE CARDS - Mobile Stacking
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .timeline-card {
+        width: 80% !important;
+        max-width: 400px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-card {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .timeline-item::before {
+        display: none !important;
+    }
+}
+
+/* =====================================================
+   5. CASE STUDY CARDS (Index Page) - Responsive Padding
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .case-study-card {
+        padding: 40px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-card {
+        padding: 24px !important;
+    }
+
+    .case-study-wrapper {
+        margin-bottom: 60px !important;
+    }
+}
+
+/* =====================================================
+   6. WIREFRAME GALLERY - Responsive Grid
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .cs-wireframe-gallery {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cs-wireframe-wide {
+        grid-column: span 1 !important;
+    }
+}
+
+/* =====================================================
+   7. GENERAL CONTENT FIXES - Prevent Overflow
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-content,
+    .cs-content-wide {
+        padding: 40px 16px !important;
+        max-width: 100% !important;
+    }
+
+    .cs-section,
+    .cs-section-alt {
+        padding: 48px 16px !important;
+    }
+
+    .cs-section-title {
+        font-size: 28px !important;
+        word-wrap: break-word;
+    }
+
+    .cs-subsection-title {
+        font-size: 18px !important;
+    }
+
+    /* Prevent text overflow */
+    .cs-metric-value {
+        font-size: 28px !important;
+        word-break: break-word;
+    }
+
+    .cs-metric-label {
+        font-size: 11px !important;
+    }
+
+    /* Stats grid */
+    .cs-stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    /* Impact grid */
+    .cs-impact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .cs-impact-value {
+        font-size: 36px !important;
+    }
+}
+
+/* =====================================================
+   8. NAVIGATION RESPONSIVE - Mobile Menu
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-nav {
+        padding: 12px 16px !important;
+    }
+
+    .cs-back-btn {
+        font-size: 14px !important;
+        padding: 8px 16px !important;
+    }
+}
+
+/* =====================================================
+   9. TABLE OF CONTENTS - Mobile Adjustments
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-toc {
+        padding: 16px !important;
+        margin: 0 16px !important;
+    }
+
+    .cs-toc-list {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =====================================================
+   10. RELATED CASE STUDY - Mobile Layout
+   ===================================================== */
+
+@media (max-width: 600px) {
+    .cs-related-card {
+        flex-direction: column !important;
+    }
+
+    .cs-related-image {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .cs-related-content {
+        padding: 24px !important;
+    }
+}
+
+/* =====================================================
+   11. THEME-SPECIFIC CAROUSEL RESPONSIVE OVERRIDES
+   ===================================================== */
+
+/* Designer Theme */
+@media (max-width: 900px) {
+    html.theme-designer .nav-orb {
+        width: 54px;
+        height: 54px;
+    }
+}
+
+@media (max-width: 768px) {
+    html.theme-designer .nav-orb {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Business Theme */
+@media (max-width: 768px) {
+    html.theme-business .nav-orb {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Undecided/Editorial Theme */
+@media (max-width: 768px) {
+    html.theme-undecided .nav-orb {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* =====================================================
+   12. JOURNEY COMPONENT - Mobile Fixes
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .cs-journey {
+        gap: 16px !important;
+    }
+
+    .cs-journey-step {
+        padding: 16px !important;
+        min-width: 120px !important;
+    }
+
+    .cs-journey-arrow {
+        width: 24px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cs-journey {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .cs-journey-arrow {
+        transform: rotate(90deg) !important;
+    }
+
+    .cs-journey-step {
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+}
+
+/* =====================================================
+   13. PERSONA/FEATURE CARDS - Mobile Grid
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-personas-grid,
+    .cs-features-grid,
+    .cs-learnings-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* =====================================================
+   14. QUOTES - Mobile Sizing
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-quote,
+    .cs-interview-quote,
+    .cs-closing-quote {
+        padding: 24px 20px !important;
+        font-size: 16px !important;
+    }
+
+    .cs-quotes-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =====================================================
+   15. BEFORE/AFTER COMPARISON - Mobile Stack
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-before-after {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .cs-ba-item {
+        width: 100% !important;
+    }
+
+    .cs-ab-test {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =====================================================
+   16. ERROR RATES/CHARTS - Mobile Adjustments
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-error-rates {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 16px !important;
+    }
+
+    .cs-error-item {
+        min-width: 100px !important;
+    }
+
+    .cs-error-chart {
+        overflow-x: auto !important;
+    }
+}
+
+/* =====================================================
+   17. PAIN POINTS/COMPETITORS - Mobile Grid
+   ===================================================== */
+
+@media (max-width: 600px) {
+    .cs-pain-points,
+    .cs-competitors-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =====================================================
+   18. INSIGHTS LIST - Mobile Adjustments
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-insights-list {
+        gap: 20px !important;
+    }
+
+    .cs-insight-card {
+        padding: 20px !important;
+    }
+}
+
+/* =====================================================
+   19. MOCKUPS GALLERY - Mobile Grid
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .cs-mockups-gallery {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cs-mockups-gallery {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =====================================================
+   20. FINAL RESULT SECTION - Mobile Adjustments
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-final-result {
+        padding: 40px 16px !important;
+    }
+
+    .cs-final-image {
+        border-radius: 8px !important;
+    }
+
+    .cs-final-caption {
+        font-size: 14px !important;
+        padding: 16px !important;
+    }
+}
