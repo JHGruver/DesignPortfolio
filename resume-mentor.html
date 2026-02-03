@@ -30,7 +30,7 @@
     <!-- Resume Viewer -->
     <div class="resume-viewer">
         <!-- Back Button (aligned with left arrow) -->
-        <a href="index.html" class="resume-back-btn">← Back to Portfolio</a>
+        <a href="index.html" class="resume-back-btn" id="backBtn">← Back to Portfolio</a>
 
         <!-- Left Arrow -->
         <button class="resume-nav-btn resume-prev" id="prevBtn">‹</button>
@@ -139,6 +139,16 @@
 
         // Initialize
         updateView();
+
+        // Update back button to preserve theme
+        const backBtn = document.getElementById('backBtn');
+        if (backBtn) {
+            const savedTheme = localStorage.getItem('preferredTheme');
+            if (savedTheme) {
+                const themeName = savedTheme.replace('theme-', '');
+                backBtn.href = `index.html?theme=${themeName}`;
+            }
+        }
 
         // ===== Magnifying Glass (Desktop only) =====
         const magnifier = document.getElementById('magnifier');
