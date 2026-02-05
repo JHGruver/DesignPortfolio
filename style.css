@@ -31533,3 +31533,763 @@ html.theme-classic .cs-hero-meta-divider {
         padding: 16px !important;
     }
 }
+
+/* =====================================================
+   MOBILE RESPONSIVENESS - Phase 2 Consistency
+   ===================================================== */
+
+/* =====================================================
+   1. INDEX PAGE - Inline Style Overrides
+   ===================================================== */
+
+/* Case Studies Container */
+@media (max-width: 768px) {
+    .case-studies-container {
+        padding: 32px 16px !important;
+    }
+}
+
+/* Case Study Card Padding (overrides inline 60px) */
+@media (max-width: 900px) {
+    .case-study-card {
+        padding: 36px !important;
+    }
+
+    .case-study-wrapper {
+        margin-bottom: 80px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study-card {
+        padding: 20px !important;
+    }
+
+    .case-study-wrapper {
+        margin-bottom: 48px !important;
+    }
+
+    /* Case study header flex layout */
+    .case-study-card > div:first-child > div:first-child {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    /* Case study title */
+    .case-study-card h2 {
+        font-size: 24px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-study-card {
+        padding: 16px !important;
+    }
+
+    .case-study-card h2 {
+        font-size: 22px !important;
+    }
+}
+
+/* =====================================================
+   2. INDEX PAGE - Font Sizes for Mobile
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .case-studies-title {
+        font-size: 36px !important;
+    }
+
+    .section-title,
+    .process-title,
+    .timeline-title {
+        font-size: 36px !important;
+    }
+
+    .about-title {
+        font-size: 42px !important;
+    }
+
+    .skills-title,
+    .impact-title {
+        font-size: 34px !important;
+    }
+
+    .organization-journey-title {
+        font-size: 26px !important;
+    }
+
+    .testimonials-title {
+        font-size: 28px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-studies-title {
+        font-size: 28px !important;
+    }
+
+    .section-title,
+    .process-title,
+    .timeline-title {
+        font-size: 28px !important;
+    }
+
+    .about-title {
+        font-size: 32px !important;
+    }
+
+    .skills-title,
+    .impact-title {
+        font-size: 26px !important;
+    }
+
+    .organization-journey-title {
+        font-size: 22px !important;
+    }
+
+    .testimonials-title {
+        font-size: 24px !important;
+    }
+
+    .testimonial-quote-mark {
+        font-size: 32px !important;
+    }
+
+    .metric-number {
+        font-size: 24px !important;
+    }
+
+    .process-description {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-studies-title {
+        font-size: 24px !important;
+    }
+
+    .section-title,
+    .process-title,
+    .timeline-title {
+        font-size: 24px !important;
+    }
+
+    .about-title {
+        font-size: 26px !important;
+    }
+}
+
+/* =====================================================
+   3. INDEX PAGE - Metric Values on Mobile
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .case-study-card p[style*="font-size: 32px"] {
+        font-size: 24px !important;
+    }
+
+    .case-study-card p[style*="font-size: 36px"] {
+        font-size: 28px !important;
+    }
+}
+
+/* =====================================================
+   4. INDEX PAGE - Grid Overrides for Mobile
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .about-metrics {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .methodologies-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .adaptability-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-metrics {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 16px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-metrics {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =====================================================
+   5. INDEX PAGE - Process Steps Responsive
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .process-step {
+        padding: 40px 28px !important;
+        margin: 0 8px 16px 8px !important;
+        min-width: 240px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-step {
+        padding: 28px 20px !important;
+        margin: 0 0 12px 0 !important;
+        flex: 1 1 100% !important;
+        min-width: unset !important;
+    }
+
+    .process-philosophy {
+        padding: 32px 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-step {
+        padding: 20px 16px !important;
+    }
+
+    .process-philosophy {
+        padding: 24px 16px !important;
+    }
+}
+
+/* =====================================================
+   6. INDEX PAGE - Timeline Section Responsive
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .timeline-section {
+        padding: 40px 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-section {
+        padding: 32px 12px !important;
+    }
+
+    /* Timeline entry grids */
+    .hover-dashboard div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Organization cards */
+    .organization-card {
+        padding: 16px 20px !important;
+    }
+}
+
+/* =====================================================
+   7. INDEX PAGE - Testimonials Responsive
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .testimonials-section {
+        padding: 40px 16px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 32px 12px !important;
+    }
+}
+
+/* =====================================================
+   8. INDEX PAGE - Divider Dashboard Responsive
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .case-study-divider {
+        margin: 40px 0 !important;
+    }
+
+    .divider-dashboard {
+        padding: 20px !important;
+    }
+
+    .divider-metrics {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    .divider-metric {
+        min-width: unset !important;
+        width: 100% !important;
+    }
+
+    .divider-metric-value {
+        font-size: 28px !important;
+    }
+}
+
+/* =====================================================
+   9. INDEX PAGE - About Section Responsive
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .metric-card {
+        padding: 20px 16px !important;
+        border-right: none !important;
+        border-bottom: 1px solid #222 !important;
+    }
+}
+
+/* =====================================================
+   10. INDEX PAGE - Impact Section Responsive
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .impact-highlight {
+        margin-bottom: 32px !important;
+    }
+
+    .impact-highlight-title {
+        font-size: 20px !important;
+    }
+
+    .impact-highlight-text {
+        font-size: 14px !important;
+    }
+}
+
+/* =====================================================
+   11. CLASSIC THEME - Responsive Parity
+   Case Study Page Styles
+   ===================================================== */
+
+/* Classic Theme - Hero Section */
+html.theme-classic .cs-hero {
+    padding: 140px 40px 80px;
+}
+
+html.theme-classic .cs-hero-title {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #2d2d2d;
+    margin-bottom: 24px;
+}
+
+html.theme-classic .cs-hero-tagline {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    max-width: 700px;
+}
+
+html.theme-classic .cs-label {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+/* Classic Theme - Metrics Bar */
+html.theme-classic .cs-metrics-bar {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #ddd;
+}
+
+html.theme-classic .cs-metric {
+    text-align: center;
+}
+
+html.theme-classic .cs-metric-value {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #2d2d2d;
+    display: block;
+}
+
+html.theme-classic .cs-metric-label {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    display: block;
+    margin-top: 6px;
+}
+
+/* Classic Theme - Section Styling */
+html.theme-classic .cs-section {
+    padding: 80px 40px;
+}
+
+html.theme-classic .cs-section-alt {
+    padding: 80px 40px;
+    background: #f9f9f9;
+}
+
+html.theme-classic .cs-section-title {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #2d2d2d;
+}
+
+html.theme-classic .cs-section-subtitle {
+    font-family: Georgia, serif;
+    color: #888;
+    font-style: italic;
+}
+
+html.theme-classic .cs-section-label {
+    font-family: Georgia, serif;
+    color: #aaa;
+}
+
+html.theme-classic .cs-subsection-title {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: #2d2d2d;
+    font-weight: 400;
+}
+
+/* Classic Theme - Cards & Components */
+html.theme-classic .cs-stat-card,
+html.theme-classic .cs-feature-card,
+html.theme-classic .cs-learning-card,
+html.theme-classic .cs-insight-card,
+html.theme-classic .cs-persona-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+html.theme-classic .cs-stat-value {
+    font-family: Georgia, serif;
+    color: #2d2d2d;
+}
+
+html.theme-classic .cs-stat-label {
+    font-family: Georgia, serif;
+    color: #888;
+}
+
+/* Classic Theme - Impact Section */
+html.theme-classic .cs-impact-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+html.theme-classic .cs-impact-value {
+    font-family: Georgia, serif;
+    color: #2d2d2d;
+}
+
+html.theme-classic .cs-impact-label {
+    font-family: Georgia, serif;
+    color: #888;
+}
+
+/* Classic Theme - Quotes */
+html.theme-classic .cs-quote,
+html.theme-classic .cs-closing-quote {
+    font-family: Georgia, serif;
+    border-left: 3px solid #2d2d2d;
+    background: #f9f9f9;
+    font-style: italic;
+}
+
+/* Classic Theme - Navigation */
+html.theme-classic .cs-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+html.theme-classic .cs-back-btn {
+    font-family: Georgia, serif;
+    color: #2d2d2d;
+}
+
+/* Classic Theme - Footer */
+html.theme-classic .cs-footer {
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+html.theme-classic .cs-footer-link {
+    font-family: Georgia, serif;
+    color: #2d2d2d;
+}
+
+html.theme-classic .cs-copyright {
+    font-family: Georgia, serif;
+    color: #888;
+}
+
+/* Classic Theme - Contact CTA */
+html.theme-classic .cs-contact-cta {
+    background: #2d2d2d;
+}
+
+html.theme-classic .cs-cta-title {
+    font-family: Georgia, serif;
+    color: #ffffff;
+}
+
+html.theme-classic .cs-cta-text {
+    font-family: Georgia, serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+html.theme-classic .cs-cta-button {
+    font-family: Georgia, serif;
+    background: #ffffff;
+    color: #2d2d2d;
+    border-radius: 4px;
+}
+
+/* =====================================================
+   12. CLASSIC THEME - Responsive Breakpoints
+   ===================================================== */
+
+@media (max-width: 900px) {
+    html.theme-classic .cs-hero {
+        padding: 100px 24px 60px;
+    }
+
+    html.theme-classic .cs-hero-title {
+        font-size: 38px;
+    }
+
+    html.theme-classic .cs-metrics-bar {
+        flex-wrap: wrap;
+        gap: 28px;
+    }
+
+    html.theme-classic .cs-section,
+    html.theme-classic .cs-section-alt {
+        padding: 60px 24px;
+    }
+
+    html.theme-classic .cs-section-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    html.theme-classic .cs-hero {
+        padding: 80px 16px 48px;
+    }
+
+    html.theme-classic .cs-hero-title {
+        font-size: 28px;
+    }
+
+    html.theme-classic .cs-hero-tagline {
+        font-size: 15px;
+    }
+
+    html.theme-classic .cs-metrics-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    html.theme-classic .cs-metric-value {
+        font-size: 28px;
+    }
+
+    html.theme-classic .cs-section,
+    html.theme-classic .cs-section-alt {
+        padding: 48px 16px;
+    }
+
+    html.theme-classic .cs-section-title {
+        font-size: 24px;
+    }
+
+    html.theme-classic .cs-subsection-title {
+        font-size: 18px;
+    }
+
+    html.theme-classic .cs-nav {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    html.theme-classic .cs-hero-title {
+        font-size: 24px;
+    }
+
+    html.theme-classic .cs-impact-value {
+        font-size: 32px;
+    }
+
+    html.theme-classic .cs-section-title {
+        font-size: 22px;
+    }
+}
+
+/* =====================================================
+   13. EXTRA-SMALL PHONES - 375px Breakpoint
+   ===================================================== */
+
+@media (max-width: 375px) {
+    /* Index page */
+    .case-study-card {
+        padding: 14px !important;
+    }
+
+    .case-study-card h2 {
+        font-size: 20px !important;
+    }
+
+    .metric-number {
+        font-size: 22px !important;
+    }
+
+    .process-step {
+        padding: 16px 12px !important;
+    }
+
+    /* Carousel */
+    .carousel-stack {
+        max-width: 280px;
+        height: 220px;
+    }
+
+    .carousel-perspective {
+        min-height: 280px;
+    }
+
+    .nav-orb {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-orb svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .progress-track {
+        width: 120px;
+    }
+
+    /* Case Studies */
+    .cs-hero-title {
+        font-size: 24px !important;
+    }
+
+    .cs-hero-tagline {
+        font-size: 14px !important;
+    }
+
+    .cs-metric-value {
+        font-size: 24px !important;
+    }
+
+    .cs-section-title {
+        font-size: 22px !important;
+    }
+
+    .cs-subsection-title {
+        font-size: 16px !important;
+    }
+
+    .cs-impact-value {
+        font-size: 28px !important;
+    }
+
+    /* General text */
+    .cs-body-text,
+    .cs-pain-desc,
+    .cs-feature-desc,
+    .cs-insight-text,
+    .cs-learning-text {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Hero metadata */
+    .cs-hero-meta-value {
+        font-size: 13px !important;
+    }
+
+    .cs-hero-meta-label {
+        font-size: 9px !important;
+    }
+}
+
+/* =====================================================
+   14. GLOBAL OVERFLOW PREVENTION
+   ===================================================== */
+
+/* Prevent horizontal scroll on all devices */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Ensure all images scale within bounds */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Word wrapping for long text */
+.cs-metric-value,
+.cs-impact-value,
+.cs-stat-value,
+.metric-number,
+.divider-metric-value {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Constrain max-widths on mobile */
+@media (max-width: 768px) {
+    .cs-content,
+    .cs-content-wide {
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* Ensure grids don't overflow */
+    .cs-stats-grid,
+    .cs-impact-grid,
+    .cs-features-grid,
+    .cs-personas-grid,
+    .cs-learnings-grid,
+    .cs-insights-list,
+    .cs-pain-points,
+    .cs-competitors-grid {
+        overflow: hidden;
+    }
+
+    /* Table scrolling */
+    .cs-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
