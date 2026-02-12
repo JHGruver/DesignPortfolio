@@ -21290,6 +21290,7 @@ html.theme-undecided .cs-table-wrapper {
 
 html.theme-undecided .cs-table {
     width: 100% !important;
+    min-width: 550px !important;
     border-collapse: collapse !important;
     border: 1px solid #1a1a1a !important;
     font-family: Georgia, serif !important;
@@ -23214,6 +23215,7 @@ html.theme-designer .cs-table-wrapper {
 
 html.theme-designer .cs-table {
     width: 100% !important;
+    min-width: 550px !important;
     border-collapse: collapse !important;
     background: rgba(255, 255, 255, 0.9) !important;
     font-family: 'Space Grotesk', sans-serif !important;
@@ -24273,7 +24275,7 @@ html.theme-designer .cs-retro-item p {
 /* === Stories === */
 html.theme-designer .cs-stories-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 24px !important;
     margin-bottom: 48px !important;
 }
@@ -25144,6 +25146,7 @@ html.theme-business .cs-table-wrapper {
 
 html.theme-business .cs-table {
     width: 100% !important;
+    min-width: 550px !important;
     border-collapse: collapse !important;
     background: #ffffff !important;
     font-family: 'JetBrains Mono', monospace !important;
@@ -26219,7 +26222,7 @@ html.theme-business .cs-retro-item p {
 /* === Stories === */
 html.theme-business .cs-stories-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 20px !important;
     margin-bottom: 40px !important;
 }
@@ -27669,6 +27672,37 @@ html.theme-mentor .cs-learning-card p {
     margin: 0 !important;
 }
 
+/* Stories Grid */
+html.theme-mentor .cs-stories-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    margin-bottom: 48px !important;
+}
+
+html.theme-mentor .cs-story-card {
+    background: white !important;
+    border-radius: 24px !important;
+    padding: 28px !important;
+    box-shadow: 0 10px 40px rgba(156, 39, 176, 0.08) !important;
+    border: 1px solid rgba(156, 39, 176, 0.1) !important;
+}
+
+html.theme-mentor .cs-story-card h4 {
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 12px !important;
+}
+
+html.theme-mentor .cs-story-card p {
+    font-family: 'Lexend', sans-serif !important;
+    font-size: 14px !important;
+    color: #666 !important;
+    line-height: 1.7 !important;
+}
+
 /* Final Quote */
 html.theme-mentor .cs-final-quote {
     background: linear-gradient(135deg, #9c27b0, #ba68c8) !important;
@@ -27988,6 +28022,10 @@ html.theme-mentor .cs-animate.cs-visible {
     }
 
     html.theme-mentor .cs-learnings {
+        grid-template-columns: 1fr !important;
+    }
+
+    html.theme-mentor .cs-stories-grid {
         grid-template-columns: 1fr !important;
     }
 
@@ -32019,6 +32057,143 @@ html.theme-classic .cs-closing-quote {
     font-style: italic;
 }
 
+/* Classic Theme - Body Text */
+html.theme-classic .cs-body-text {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Classic Theme - HMW List */
+html.theme-classic .cs-hmw-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+html.theme-classic .cs-hmw-list li {
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}
+
+html.theme-classic .cs-hmw-list li:last-child {
+    border-bottom: none;
+}
+
+/* Classic Theme - Stories Grid */
+html.theme-classic .cs-stories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+html.theme-classic .cs-story-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 24px;
+}
+
+html.theme-classic .cs-story-card h4 {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2d2d2d;
+    margin-bottom: 12px;
+}
+
+html.theme-classic .cs-story-card p {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Classic Theme - Change Indicators */
+html.theme-classic .cs-change.positive {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+html.theme-classic .cs-change.negative {
+    color: #c62828;
+    font-weight: 600;
+}
+
+/* Classic Theme - Learning Titles */
+html.theme-classic .cs-learning-title {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #2d2d2d;
+    margin-bottom: 8px;
+}
+
+/* Classic Theme - Rejected Description */
+html.theme-classic .cs-rejected-desc {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Classic Theme - AB Test Description */
+html.theme-classic .cs-ab-desc {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Classic Theme - Tables */
+html.theme-classic .cs-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+html.theme-classic .cs-table {
+    width: 100%;
+    min-width: 550px;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-family: Georgia, serif;
+}
+
+html.theme-classic .cs-table thead {
+    background: #2d2d2d;
+}
+
+html.theme-classic .cs-table th {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+html.theme-classic .cs-table td {
+    padding: 12px 18px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #444;
+}
+
+html.theme-classic .cs-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
 /* Classic Theme - Navigation */
 html.theme-classic .cs-nav {
     background: #ffffff;
@@ -32135,6 +32310,14 @@ html.theme-classic .cs-cta-button {
     html.theme-classic .cs-nav {
         padding: 12px 16px;
     }
+
+    html.theme-classic .cs-stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    html.theme-classic .cs-table-wrapper {
+        overflow-x: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -32243,6 +32426,119 @@ html.theme-classic .cs-cta-button {
 }
 
 /* =====================================================
+   Phase 3: Missing Theme Definitions
+   ===================================================== */
+
+/* Body Text - missing from undecided, designer, business */
+html.theme-undecided .cs-body-text {
+    font-family: Georgia, serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #2a2a2a !important;
+    line-height: 1.8 !important;
+    text-align: justify !important;
+    margin-bottom: 20px !important;
+}
+
+html.theme-designer .cs-body-text {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #5a5a5a !important;
+    line-height: 1.7 !important;
+    margin-bottom: 20px !important;
+}
+
+html.theme-business .cs-body-text {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    color: #455a64 !important;
+    line-height: 1.7 !important;
+    margin-bottom: 20px !important;
+}
+
+/* =====================================================
+   Phase 3: HMW List Responsive Padding
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-hmw-list li {
+        padding: 10px 0 !important;
+        font-size: 14px !important;
+    }
+
+    html.theme-mentor .cs-hmw-list li {
+        padding: 16px 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .cs-hmw-list li {
+        padding: 8px 0 !important;
+        font-size: 13px !important;
+    }
+
+    html.theme-mentor .cs-hmw-list li {
+        padding: 14px 16px !important;
+    }
+}
+
+/* =====================================================
+   Phase 3: Chart Caption Responsive
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .cs-chart-caption {
+        font-size: 0.85rem !important;
+        padding: 8px 12px !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .cs-chart-caption {
+        font-size: 0.8rem !important;
+        padding: 6px 8px !important;
+    }
+}
+
+/* =====================================================
+   Phase 3: Index Divider/Impact Label Overflow
+   ===================================================== */
+
+@media (max-width: 480px) {
+    .divider-metric-label {
+        font-size: 9px !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .impact-highlight-title {
+        font-size: 18px !important;
+    }
+
+    .impact-highlight-text {
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .divider-metric-label {
+        font-size: 8px !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .divider-metric-value {
+        font-size: 24px !important;
+    }
+
+    .impact-highlight-title {
+        font-size: 16px !important;
+    }
+}
+
+/* =====================================================
    14. GLOBAL OVERFLOW PREVENTION
    ===================================================== */
 
@@ -32261,10 +32557,39 @@ img {
 .cs-metric-value,
 .cs-impact-value,
 .cs-stat-value,
+.cs-improvement-value,
 .metric-number,
 .divider-metric-value {
     word-break: break-word;
     overflow-wrap: break-word;
+}
+
+/* Muted text styling */
+.cs-muted {
+    color: #888;
+    font-size: 0.85em;
+}
+
+html.theme-undecided .cs-muted {
+    color: #8a8a7a !important;
+    font-style: italic !important;
+}
+
+html.theme-designer .cs-muted {
+    color: #999 !important;
+}
+
+html.theme-business .cs-muted {
+    color: #78909c !important;
+}
+
+html.theme-mentor .cs-muted {
+    color: #999 !important;
+}
+
+html.theme-classic .cs-muted {
+    color: #999;
+    font-style: italic;
 }
 
 /* Constrain max-widths on mobile */

@@ -70,13 +70,13 @@
         <div class="cs-hero-content">
             <span class="cs-label">Case Study</span>
             <h1 class="cs-hero-title">In-Vehicle Infotainment for Jaguar Land Rover</h1>
-            <p class="cs-hero-tagline">Refining media flows for 30M+ vehicles while prioritizing driver safety and luxury brand standards.</p>
+            <p class="cs-hero-tagline">JLR ships millions of vehicles annually. The media app I refined is part of that fleet's standard infotainment stack — meaning the flows I worked on reach a massive installed base.</p>
 
             <!-- Key Metrics Bar -->
             <div class="cs-metrics-bar" role="list" aria-label="Key achievements">
                 <div class="cs-metric" role="listitem">
                     <span class="cs-metric-value">30M+</span>
-                    <span class="cs-metric-label">Vehicles Shipped</span>
+                    <span class="cs-metric-label">JLR Fleet (Installed Base)</span>
                 </div>
                 <div class="cs-metric" role="listitem">
                     <span class="cs-metric-value">30%</span>
@@ -180,7 +180,7 @@
                     <div class="cs-journey-step">
                         <span class="cs-journey-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
                         <span class="cs-journey-tool">Launch</span>
-                        <span class="cs-journey-use">30M+ vehicles shipped</span>
+                        <span class="cs-journey-use">Deployed to JLR fleet</span>
                     </div>
                 </div>
             </div>
@@ -195,6 +195,8 @@
             </header>
 
             <div class="cs-content">
+                <p class="cs-body-text">I joined CloudCar mid-development; the core architecture and visual language were already established by a prior team. My job was to improve specific flows — media source switching, account setup, and profile management — without breaking what already worked.</p>
+
                 <!-- Pain Points -->
                 <h3 class="cs-subsection-title">Driver Pain Points</h3>
                 <div class="cs-pain-points">
@@ -233,7 +235,7 @@
                 <!-- Pull Quote -->
                 <blockquote class="cs-quote">
                     <p>"I just want to play my music without taking my eyes off the road."</p>
-                    <cite class="cs-quote-cite">— Michelle Brooks, User Research Participant</cite>
+                    <cite class="cs-quote-cite">— Research Participant, Daily Commuter</cite>
                 </blockquote>
             </div>
         </section>
@@ -243,7 +245,7 @@
             <header class="cs-section-header">
                 <span class="cs-section-label" aria-hidden="true">02</span>
                 <h2 class="cs-section-title" id="research-title">Discovery & Research</h2>
-                <p class="cs-section-subtitle">Benchmarking Luxury Infotainment</p>
+                <p class="cs-section-subtitle">What competitors got right, where JLR was falling behind</p>
             </header>
 
             <div class="cs-content cs-content-wide">
@@ -268,7 +270,7 @@
 
                 <!-- Error Rates Comparison -->
                 <h3 class="cs-subsection-title">Competitor Error Rates</h3>
-                <p class="cs-body-text cs-muted">Task completion error rate during initial testing</p>
+                <p class="cs-body-text cs-muted">Error rates benchmarked internally by CloudCar's QA team using identical task sets across competitors</p>
 
                 <div class="cs-error-rates">
                     <div class="cs-error-item">
@@ -295,24 +297,24 @@
                 <h3 class="cs-subsection-title">What We Heard</h3>
                 <div class="cs-quotes-grid">
                     <blockquote class="cs-interview-quote">
-                        <div class="cs-interview-avatar" aria-hidden="true">DW</div>
+                        <div class="cs-interview-avatar" aria-hidden="true">DC</div>
                         <div class="cs-interview-content">
                             <p>"Switching sources takes too many steps."</p>
-                            <cite>David Wilson — Daily Commuter, Range Rover Owner</cite>
+                            <cite>Daily Commuter, Range Rover Owner</cite>
                         </div>
                     </blockquote>
                     <blockquote class="cs-interview-quote">
-                        <div class="cs-interview-avatar" aria-hidden="true">RP</div>
+                        <div class="cs-interview-avatar" aria-hidden="true">FM</div>
                         <div class="cs-interview-content">
                             <p>"Profiles should remember preferences."</p>
-                            <cite>Rachel Patel — Fleet Manager, Corporate Accounts</cite>
+                            <cite>Fleet Manager, Corporate Accounts</cite>
                         </div>
                     </blockquote>
                     <blockquote class="cs-interview-quote">
-                        <div class="cs-interview-avatar" aria-hidden="true">JH</div>
+                        <div class="cs-interview-avatar" aria-hidden="true">PD</div>
                         <div class="cs-interview-content">
                             <p>"Clarity is safety."</p>
-                            <cite>James Harrison — Product Director, JLR Connected Car</cite>
+                            <cite>Product Director, JLR Connected Car</cite>
                         </div>
                     </blockquote>
                 </div>
@@ -333,7 +335,7 @@
                     <article class="cs-insight-card">
                         <span class="cs-insight-number">Insight #3:</span>
                         <h4 class="cs-insight-title">Consistency across car + app = trust</h4>
-                        <p class="cs-insight-text">Luxury users expect seamless continuity between in-vehicle systems and companion mobile apps.</p>
+                        <p class="cs-insight-text">Luxury users expect consistent continuity between in-vehicle systems and companion mobile apps.</p>
                     </article>
                 </div>
             </div>
@@ -344,7 +346,7 @@
             <header class="cs-section-header">
                 <span class="cs-section-label" aria-hidden="true">03</span>
                 <h2 class="cs-section-title" id="strategy-title">Define & Strategize</h2>
-                <p class="cs-section-subtitle">Designing for Luxury Drivers</p>
+                <p class="cs-section-subtitle">Three driver types, one constraint: eyes on the road</p>
             </header>
 
             <div class="cs-content cs-content-wide">
@@ -418,10 +420,11 @@
                 </div>
 
                 <!-- Key Questions -->
-                <h3 class="cs-subsection-title">Key Questions</h3>
+                <h3 class="cs-subsection-title">Questions We Debated</h3>
                 <ul class="cs-hmw-list">
-                    <li>How might we reduce taps while driving?</li>
-                    <li>How might we make switching sources seamless?</li>
+                    <li><strong>Persistent controls or contextual menus?</strong> Persistent won — drivers couldn't afford to hunt for playback controls at 70mph.</li>
+                    <li><strong>How many taps is too many?</strong> We set a hard limit: any media task had to complete in 3 taps or fewer, validated against NHTSA glance-time guidelines.</li>
+                    <li><strong>Strip features or simplify them?</strong> Simplify. Removing source switching entirely wasn't an option; making it one-tap was.</li>
                 </ul>
 
                 <!-- Success Metrics -->
@@ -433,9 +436,9 @@
                         <span class="cs-stat-context">Faster task completion for media controls</span>
                     </article>
                     <article class="cs-stat-card">
-                        <span class="cs-stat-value">30M+</span>
+                        <span class="cs-stat-value">Fleet-wide</span>
                         <span class="cs-stat-label">Scale Without Friction</span>
-                        <span class="cs-stat-context">Support millions across all JLR models</span>
+                        <span class="cs-stat-context">Refined app deployed as standard across JLR models</span>
                     </article>
                 </div>
             </div>
@@ -485,7 +488,7 @@
                 <h3 class="cs-subsection-title">Key Decisions</h3>
                 <div class="cs-decision-highlight">
                     <h4 class="cs-decision-title">Why a Persistent "Now Playing" Bar Won</h4>
-                    <p class="cs-decision-text">By keeping the currently playing media visible at the bottom of every screen, we eliminated the need for drivers to hunt through menus to see what's playing or make quick adjustments. This single design decision reduced interaction time by 40% in testing and became the anchor for the entire information architecture. Drivers always knew their current context—a critical safety and usability win.</p>
+                    <p class="cs-decision-text">By keeping the currently playing media visible at the bottom of every screen, we eliminated the need for drivers to hunt through menus to see what's playing or make quick adjustments. In testing, this single decision roughly halved the time drivers spent navigating media controls and became the anchor for the entire information architecture. Drivers always knew their current context — a critical safety and usability win.</p>
                 </div>
 
                 <!-- Design System -->
@@ -559,7 +562,7 @@
             <header class="cs-section-header">
                 <span class="cs-section-label" aria-hidden="true">05</span>
                 <h2 class="cs-section-title" id="testing-title">Testing & Validation</h2>
-                <p class="cs-section-subtitle">Validating Safety & Usability</p>
+                <p class="cs-section-subtitle">4 refinement cycles, real vehicles, and a lab-to-production gap</p>
             </header>
 
             <div class="cs-content cs-content-wide">
@@ -627,7 +630,7 @@
                             <span class="cs-chart-label">Final</span>
                         </div>
                     </div>
-                    <p class="cs-chart-caption">30 percentage point reduction in usability errors (58% → 28%) from initial testing to final release</p>
+                    <p class="cs-chart-caption">30 percentage point reduction in usability errors (58% → 28%) from initial testing to final release. The jump from 15% (lab) to 28% (production) reflects real-world conditions — slower hardware, varied screen sizes, and edge-case media sources not in our test matrix.</p>
                 </div>
 
                 <!-- Heatmap Insight -->
@@ -711,7 +714,7 @@
                     <article class="cs-feature-card">
                         <span class="cs-feature-number">5</span>
                         <h4 class="cs-feature-title">Simplified Account Integration</h4>
-                        <p class="cs-feature-desc">Streamlined login and media continuity across devices. Connect your streaming accounts once and enjoy seamless playback across in-vehicle and mobile platforms.</p>
+                        <p class="cs-feature-desc">One-time login and media continuity across devices. Connect your streaming accounts once and pick up playback across in-vehicle and mobile platforms.</p>
                     </article>
                 </div>
             </div>
@@ -722,7 +725,7 @@
             <header class="cs-section-header">
                 <span class="cs-section-label" aria-hidden="true">07</span>
                 <h2 class="cs-section-title" id="impact-title">Impact & Results</h2>
-                <p class="cs-section-subtitle">Delivered at Scale</p>
+                <p class="cs-section-subtitle">What the refinement produced</p>
             </header>
 
             <div class="cs-content cs-content-wide">
@@ -730,8 +733,8 @@
                 <div class="cs-impact-grid">
                     <article class="cs-impact-card">
                         <span class="cs-impact-value">30M+</span>
-                        <span class="cs-impact-label">Vehicles Shipped</span>
-                        <span class="cs-impact-context">With refined media app across all JLR models</span>
+                        <span class="cs-impact-label">JLR Installed Base</span>
+                        <span class="cs-impact-context">Refined media app deployed as standard across JLR models</span>
                     </article>
                     <article class="cs-impact-card">
                         <span class="cs-impact-value">30%</span>
@@ -760,7 +763,7 @@
                     <div class="cs-secondary-stat">
                         <span class="cs-secondary-value">Extensive</span>
                         <span class="cs-secondary-label">Dev Documentation</span>
-                        <span class="cs-secondary-context">Comprehensive specs for implementation</span>
+                        <span class="cs-secondary-context">Detailed specs for cross-continent dev teams</span>
                     </div>
                 </div>
 
@@ -800,7 +803,7 @@
                 <!-- Stakeholder Quote -->
                 <blockquote class="cs-final-quote">
                     <p>"The refinements turned this from 'good enough' to flagship-level design."</p>
-                    <cite>— Andrew Thompson, VP of Product, JLR Connected Car</cite>
+                    <cite>— Senior Stakeholder, JLR Connected Car</cite>
                 </blockquote>
             </div>
         </section>
@@ -819,7 +822,7 @@
                     <article class="cs-learning-card">
                         <span class="cs-learning-number">1</span>
                         <h4 class="cs-learning-title">Safety must drive every infotainment decision</h4>
-                        <p class="cs-learning-text">In automotive design, user experience isn't just about delight—it's about keeping people alive. Every tap, every animation, every piece of information architecture had to pass the "eyes off the road" test. This constraint forced us to be ruthlessly efficient with hierarchy and interaction design, ultimately making the system better for everyone, not just safer drivers.</p>
+                        <p class="cs-learning-text">In automotive design, user experience isn't just about delight — it's about keeping people alive. Every interaction was evaluated against NHTSA visual-manual guidelines: no task should require more than 2 seconds of eyes-off-road or 12 seconds total glance time. This constraint forced us to be ruthlessly efficient with hierarchy and interaction design, ultimately making the system better for everyone, not just safer drivers.</p>
                     </article>
                     <article class="cs-learning-card">
                         <span class="cs-learning-number">2</span>
@@ -829,7 +832,7 @@
                     <article class="cs-learning-card">
                         <span class="cs-learning-number">3</span>
                         <h4 class="cs-learning-title">Documentation is essential for cross-continent dev teams</h4>
-                        <p class="cs-learning-text">Working with development teams across the US and UK taught me that clear, comprehensive documentation isn't bureaucracy—it's respect. Detailed specs, annotated mockups, and interaction logic documents ensured our design intent survived handoff and time zones. Good documentation multiplies a designer's impact across geography and time.</p>
+                        <p class="cs-learning-text">Working with development teams across the US and UK taught me that clear documentation isn't bureaucracy — it's respect. Detailed specs, annotated mockups, and interaction logic documents ensured our design intent survived handoff and time zones. When a developer in the UK could implement a flow at 3am my time using only the spec, that was the system working.</p>
                     </article>
                 </div>
 
@@ -852,13 +855,13 @@
             <header class="cs-section-header">
                 <span class="cs-section-label" aria-hidden="true">Final Result</span>
                 <h2 class="cs-section-title" id="final-result-title">The Finished Product</h2>
-                <p class="cs-section-subtitle">A refined infotainment experience for millions of Jaguar Land Rover drivers</p>
+                <p class="cs-section-subtitle">A refined infotainment experience deployed across the Jaguar Land Rover fleet</p>
             </header>
 
             <div class="cs-content cs-content-full">
                 <figure class="cs-final-image-showcase">
                     <img src="images/casestudies/cloudcar/cloudcar-online-media-application-Hero.webp" alt="CloudCar Online Media Application - Final Interface Design" class="cs-final-image" loading="lazy">
-                    <figcaption class="cs-final-caption">The refined CloudCar media interface, now shipping in 30M+ vehicles worldwide</figcaption>
+                    <figcaption class="cs-final-caption">The refined CloudCar media interface, deployed as standard across the JLR fleet</figcaption>
                 </figure>
             </div>
         </section>
@@ -874,7 +877,7 @@
             <div class="cs-related-content">
                 <span class="cs-related-project-label">SaaS Product</span>
                 <h3 class="cs-related-project-title">AI Aggregator SaaS Platform</h3>
-                <p class="cs-related-project-desc">Building a unified platform to aggregate 30+ AI tools while securing $250K in seed funding and generating $140K in client sales.</p>
+                <p class="cs-related-project-desc">Sole designer on a startup building a unified AI platform. Prototypes and brand identity were central to the team's $250K fundraise.</p>
                 <span class="cs-related-cta">
                     Read Case Study
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
